@@ -1,0 +1,31 @@
+.content {
+    margin-top: 3rem;
+    text-align: center;
+    color: white;
+  }
+  
+  .glassBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+  }
+  
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .mainImage {
+    margin: 10px;
+  }
+  
+  .sideImage {
+    margin: 10px;
+  }
