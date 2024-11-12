@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useEffect, useRef, useState } from 'react';
 import Image from "next/image";
 import styles from './styles/page.module.css';
@@ -9,24 +8,40 @@ export default function Home() {
   const [visibleBoxes, setVisibleBoxes] = useState([false, false, false]);
 
   useEffect(() => {
-    const handleScroll = () => {
-      boxRefs.forEach((ref, index) => {
-        if (ref.current) {
-          const rect = ref.current.getBoundingClientRect();
-          if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+    const observers = boxRefs.map((ref, index) => {
+      return new IntersectionObserver(
+        ([entry]) => {
+          console.log(`Box ${index} intersection:`, entry.isIntersecting); // Debug log
+          if (entry.isIntersecting) {
             setVisibleBoxes(prev => {
               const newVisibleBoxes = [...prev];
               newVisibleBoxes[index] = true;
+              console.log(`Setting box ${index} to visible`); // Debug log
               return newVisibleBoxes;
             });
           }
+        },
+        {
+          threshold: 0.1, // Reduce threshold to make it easier to trigger
+          rootMargin: '0px' // Remove negative margin
         }
-      });
-    };
+      );
+    });
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [boxRefs]);
+    // Log initial setup
+    console.log('Setting up observers');
+    
+    boxRefs.forEach((ref, index) => {
+      if (ref.current) {
+        observers[index].observe(ref.current);
+        console.log(`Observing box ${index}`); // Debug log
+      }
+    });
+
+    return () => {
+      observers.forEach(observer => observer.disconnect());
+    };
+  }, []);
 
   return (
     <div>
@@ -67,23 +82,51 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div>
-        <div className={`${styles.box} ${visibleBoxes[0] ? styles.visible : ''}`} ref={boxRefs[0]}>
+      <div className={styles.boxContainer}>
+        <div 
+          className={`${styles.box} ${visibleBoxes[0] ? styles.visible : ''}`} 
+          ref={boxRefs[0]}
+        >
           <div className={styles.overlay}></div>
-          <h2>Box 1</h2>
-          <Image src="/images/htmlcssjs.png" alt="Box 1" width={300} height={300} />
+          <h2>Frontend Development</h2>
+          <Image 
+            src="/images/htmlcssjs.png" 
+            alt="Frontend Skills" 
+            width={300} 
+            height={300} 
+            priority
+          />
         </div>
-        <div className={`${styles.box} ${visibleBoxes[1] ? styles.visible : ''}`} ref={boxRefs[1]}>
+
+        <div 
+          className={`${styles.box} ${visibleBoxes[1] ? styles.visible : ''}`} 
+          ref={boxRefs[1]}
+        >
           <div className={styles.overlay}></div>
-          <h2>Box 2</h2>
-          <Image src="/images/flutter.png" alt="Box 2" width={300} height={300} />
+          <h2>Framework Expertise</h2>
+          <Image 
+            src="/images/vue.png" 
+            alt="Framework Skills" 
+            width={300} 
+            height={300}
+          />
         </div>
-        <div className={`${styles.box} ${visibleBoxes[2] ? styles.visible : ''}`} ref={boxRefs[2]}>
+
+        <div 
+          className={`${styles.box} ${visibleBoxes[2] ? styles.visible : ''}`} 
+          ref={boxRefs[2]}
+        >
           <div className={styles.overlay}></div>
-          <h2>Box 3</h2>
-          <Image src="/images/vue.png" alt="Box 3" width={300} height={300} />
+          <h2>UI/UX Design</h2>
+          <Image 
+            src="/images/figma.png" 
+            alt="Design Skills" 
+            width={300} 
+            height={300}
+          />
         </div>
       </div>
     </div>
   );
 }
+

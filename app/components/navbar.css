@@ -20,11 +20,11 @@ nav {
   }
   
   li {
-    color: white;
+    color: rgb(239, 52, 186);
   }
   
   a {
-    color: white;
+    color: rgb(63, 186, 44);
     text-decoration: none;
     font-size: 1.2rem;
   }

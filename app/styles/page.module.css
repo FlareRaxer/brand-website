@@ -1,31 +1,102 @@
 .content {
-    margin-top: 3rem;
-    text-align: center;
-    color: white;
-  }
-  
-  .glassBox {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    padding: 20px;
-    backdrop-filter: blur(10px);
-  }
-  
-  .row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 1rem;
-  }
-  
-  .mainImage {
-    margin: 10px;
-  }
-  
-  .sideImage {
-    margin: 10px;
-  }
+  margin-top: 3rem;
+  text-align: center;
+  color: white;
+}
+
+.glassBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(245, 10, 190, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.mainImage {
+  margin: 10px;
+}
+
+.sideImage {
+  margin: 10px;
+}
+
+.box {
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 2rem;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 1s ease-out; /* Simplified transition */
+  margin: 2rem 0;
+  will-change: transform, opacity;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.box.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.boxContainer {
+  min-height: 200vh;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 40vh; /* Reduced gap */
+  position: relative; /* Add this */
+}
+
+.box h2 {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+}
+
+.box.visible h2 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.box img {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
+}
+
+.box.visible img {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, 
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  border-radius: 15px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.box:hover .overlay {
+  opacity: 1;
+}
