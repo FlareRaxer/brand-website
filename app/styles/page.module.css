@@ -4,99 +4,130 @@
   color: white;
 }
 
-.glassBox {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: rgba(245, 10, 190, 0.1);
-  border-radius: 10px;
-  padding: 20px;
-  backdrop-filter: blur(10px);
-}
-
-.row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
-.mainImage {
-  margin: 10px;
-}
-
-.sideImage {
-  margin: 10px;
-}
-
-.box {
+.frontContainer {
   position: relative;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 15px;
-  padding: 2rem;
-  opacity: 0;
-  transform: translateY(100px);
-  transition: all 1s ease-out; /* Simplified transition */
-  margin: 2rem 0;
-  will-change: transform, opacity;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(#004d40, #001f3f);
+  overflow: hidden;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.box.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.boxContainer {
-  min-height: 200vh;
-  padding: 4rem 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 40vh; /* Reduced gap */
-  position: relative; /* Add this */
-}
-
-.box h2 {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
-}
-
-.box.visible h2 {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.box img {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
-}
-
-.box.visible img {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.overlay {
+.particle {
   position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, 
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.1) 100%
-  );
-  border-radius: 15px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  border-radius: 100%;
+  background-color: #ffffff;
+  opacity: 0.4;
+  /* Smoothly transition to new positions */
+  transition: top 1s linear, left 1s linear;
+  animation: starBlink 4s infinite ease-in-out;
 }
 
-.box:hover .overlay {
-  opacity: 1;
+/* Three sizes for the particles */
+.sm {
+  width: 6px;
+  height: 6px;
 }
+.md {
+  width: 10px;
+  height: 10px;
+}
+.lg {
+  width: 14px;
+  height: 14px;
+}
+
+@keyframes starBlink {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.hero {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.heroText {
+  font-size: 6rem;
+  background: linear-gradient(90deg, #51c26f, #f2e901);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 2;
+  position: relative;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.blinkingCursor {
+  font-weight: 700;
+  font-size: 6rem;
+  color: #f534f5;
+  animation: blink 1s infinite;
+  position: relative;
+  z-index: 3;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: #f534f5;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.newSectionTitle {
+  font-size: 2rem;
+  color: white;
+}
+
+.newSectionContent {
+  font-size: 1rem;
+  color: white;
+}
+
+.aboutMe {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(#001f3f, #002848);
+  justify-content: center;
+  align-items: center;
+}
+
+.proLang {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(#002848, #001e34);
+  justify-content: center;
+  align-items: center;
+}
+
+.contactMe {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(#001e34, #001a2a);
+  justify-content: center;
+  align-items: center;
+}
+
+.endingFooter {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(#001a2a, #001520);
+  justify-content: center;
+  align-items: center;
+}
+

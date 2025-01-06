@@ -1,132 +1,104 @@
 "use client";
-import React, { useEffect, useRef, useState } from 'react';
-import Image from "next/image";
+import React, { useEffect, useState } from 'react';
 import styles from './styles/page.module.css';
 
-export default function Home() {
-  const boxRefs = [useRef<HTMLDivElement>(null), useRef<HTMLDivElement>(null), useRef<HTMLDivElement>(null)];
-  const [visibleBoxes, setVisibleBoxes] = useState([false, false, false]);
+function randPercent() {
+  return Math.floor(Math.random() * 90);
+}
 
-  useEffect(() => {
-    const observers = boxRefs.map((ref, index) => {
-      return new IntersectionObserver(
-        ([entry]) => {
-          console.log(`Box ${index} intersection:`, entry.isIntersecting); // Debug log
-          if (entry.isIntersecting) {
-            setVisibleBoxes(prev => {
-              const newVisibleBoxes = [...prev];
-              newVisibleBoxes[index] = true;
-              console.log(`Setting box ${index} to visible`); // Debug log
-              return newVisibleBoxes;
-            });
-          }
-        },
-        {
-          threshold: 0.1, // Reduce threshold to make it easier to trigger
-          rootMargin: '0px' // Remove negative margin
-        }
-      );
-    });
+function inHeroBox(top: number, left: number) {
+  return top >= 30 && top <= 60 && left >= 25 && left <= 75;
+}
 
-    // Log initial setup
-    console.log('Setting up observers');
-    
-    boxRefs.forEach((ref, index) => {
-      if (ref.current) {
-        observers[index].observe(ref.current);
-        console.log(`Observing box ${index}`); // Debug log
-      }
-    });
+function getRandomPosOutsideHero() {
+  let top: number, left: number;
+  do {
+    top = randPercent();
+    left = randPercent();
+  } while (inHeroBox(top, left));
+  return {
+    top: top + '%',
+    left: left + '%',
+  };
+}
 
-    return () => {
-      observers.forEach(observer => observer.disconnect());
-    };
-  }, []);
+function Particles() {
+  const [smallParticles] = useState(() =>
+    Array.from({ length: 50 }, () => getRandomPosOutsideHero())
+  );
+  const [mediumParticles] = useState(() =>
+    Array.from({ length: 35 }, () => getRandomPosOutsideHero())
+  );
+  const [largeParticles] = useState(() =>
+    Array.from({ length: 20 }, () => getRandomPosOutsideHero())
+  );
 
   return (
-    <div>
-      <div style={{ height: '100vh', position: 'relative' }}>
-        <Image 
-          src="/images/me_forside.jpg" 
-          alt="Description" 
-          layout="fill" 
-          objectFit="cover" 
-          quality={100}
-        />
-      </div>
-      <div className={styles.content}>
-        <h1>Header Text</h1>
-        <p>Some normal text goes here.</p>
-        <div className={styles.glassBox}>
-          <div className={styles.row}>
-            <div className={styles.sideImage}>
-              <Image src="/images/react.png" alt="Side 1" width={150} height={150} />
-            </div>
-            <div className={styles.mainImage}>
-              <Image src="/images/flutter.png" alt="Main 1" width={300} height={300} />
-            </div>
-            <div className={styles.sideImage}>
-              <Image src="/images/tailwind.png" alt="Side 2" width={150} height={150} />
-            </div>
-          </div>
-          <div className={styles.row}>
-            <div className={styles.sideImage}>
-              <Image src="/images/htmlcssjs.png" alt="Side 3" width={150} height={150} />
-            </div>
-            <div className={styles.mainImage}>
-              <Image src="/images/vue.png" alt="Main 2" width={300} height={300} />
-            </div>
-            <div className={styles.sideImage}>
-              <Image src="/images/figma.png" alt="Side 4" width={150} height={150} />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className={styles.boxContainer}>
-        <div 
-          className={`${styles.box} ${visibleBoxes[0] ? styles.visible : ''}`} 
-          ref={boxRefs[0]}
-        >
-          <div className={styles.overlay}></div>
-          <h2>Frontend Development</h2>
-          <Image 
-            src="/images/htmlcssjs.png" 
-            alt="Frontend Skills" 
-            width={300} 
-            height={300} 
-            priority
-          />
-        </div>
-
-        <div 
-          className={`${styles.box} ${visibleBoxes[1] ? styles.visible : ''}`} 
-          ref={boxRefs[1]}
-        >
-          <div className={styles.overlay}></div>
-          <h2>Framework Expertise</h2>
-          <Image 
-            src="/images/vue.png" 
-            alt="Framework Skills" 
-            width={300} 
-            height={300}
-          />
-        </div>
-
-        <div 
-          className={`${styles.box} ${visibleBoxes[2] ? styles.visible : ''}`} 
-          ref={boxRefs[2]}
-        >
-          <div className={styles.overlay}></div>
-          <h2>UI/UX Design</h2>
-          <Image 
-            src="/images/figma.png" 
-            alt="Design Skills" 
-            width={300} 
-            height={300}
-          />
-        </div>
-      </div>
-    </div>
+    <>
+      {smallParticles.map((pos, i) => (
+        <div key={'sm-' + i} className={`${styles.particle} ${styles.sm}`} style={pos} />
+      ))}
+      {mediumParticles.map((pos, i) => (
+        <div key={'md-' + i} className={`${styles.particle} ${styles.md}`} style={pos} />
+      ))}
+      {largeParticles.map((pos, i) => (
+        <div key={'lg-' + i} className={`${styles.particle} ${styles.lg}`} style={pos} />
+      ))}
+    </>
   );
 }
 
+export default function Home() {
+  const [typedText, setTypedText] = useState('');
+  const [showCursor, setShowCursor] = useState(false);
+  const fullText = 'Scharling Studio';
+  const typingSpeed = 100;
+
+  useEffect(() => {
+    let index = 0;
+    const interval = setInterval(() => {
+      if (index < fullText.length -1) {
+        setTypedText((prev) => prev + fullText[index]);
+        index++;
+      } else {
+        clearInterval(interval);
+        setShowCursor(true);
+      }
+    }, typingSpeed);
+    return () => clearInterval(interval);
+  }, [fullText, typingSpeed]);
+
+  return (
+    <>
+      <div className={styles.frontContainer}>
+        <Particles />
+        <div className={styles.hero}>
+          <h1 className={styles.heroText}>
+            {typedText}
+            {showCursor && <span className={styles.blinkingCursor}>_</span>}
+          </h1>
+        </div>
+      </div>
+
+      <section className={styles.aboutMe}>
+        <h2>Section 1</h2>
+        <p>Content for section 1</p>
+      </section>
+
+      <section className={styles.proLang}>
+        <h2>Section 2</h2>
+        <p>Content for section 2</p>
+      </section>
+
+      <section className={styles.contactMe}>
+        <h2>Section 3</h2>
+        <p>Content for section 3</p>
+      </section>
+
+      <section className={styles.endingFooter}>
+        <h2>Section 4</h2>
+        <p>Content for section 4</p>
+      </section>
+    </>
+  );
+}
