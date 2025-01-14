@@ -83,6 +83,10 @@ export default function Home() {
       <section className={styles.aboutMe}>
         <h2>Section 1</h2>
         <p>Content for section 1</p>
+        <div className={styles.aboutMeContainer}>
+          <img src="/images/me_forside.jpg" alt="Profilbillede" />
+        </div>
+
       </section>
 
       <section className={styles.proLang}>
