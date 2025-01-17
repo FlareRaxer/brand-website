@@ -10,9 +10,11 @@
   },
   "dependencies": {
     "motion": "^11.11.17",
-    "next": "15.0.2",
+    "next": "^15.1.4",
     "react": "19.0.0-rc-02c0e824-20241028",
-    "react-dom": "19.0.0-rc-02c0e824-20241028"
+    "react-dom": "19.0.0-rc-02c0e824-20241028",
+    "react-tsparticles": "^2.12.2",
+    "tsparticles": "^3.7.1"
   },
   "devDependencies": {
     "@types/node": "^20",
