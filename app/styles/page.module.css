@@ -8,7 +8,17 @@
   position: relative;
   width: 100%;
   height: 100vh;
-  background: linear-gradient(#004d40, #001f3f);
+  background: radial-gradient(circle at top center,
+                rgba(255, 255, 255, 0.2),
+                transparent 60%), 
+              linear-gradient(#1a242f, #001f3f);
+  background-image: 
+    radial-gradient(circle at top center, rgba(255,255,255,0.2), transparent 60%),
+    linear-gradient(#1a242f, #001f3f),
+    url('data:image/svg+xml;base64,...');
+  background-size: cover, cover, 50px 50px; 
+  background-repeat: no-repeat, no-repeat, repeat;
+  background-blend-mode: screen, normal, overlay; 
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -56,14 +66,21 @@
 
 .heroText {
   font-size: 6rem;
-  background: linear-gradient(90deg, #51c26f, #f2e901);
+  background: #c8efff;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   z-index: 2;
   position: relative;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   display: inline-block;
+}
+
+.heroSubText {
+  font-size: 2rem;
+  color: #F5F5F5;
+  font-family: '', sans-serif;
+  font-weight: 300;
 }
 
 .blinkingCursor {
@@ -95,10 +112,12 @@
 .aboutMe {
   position: relative;
   width: 100%;
-  height: 100vh;
   background: linear-gradient(#001f3f, #002848);
   justify-content: center;
   align-items: center;
+  display: flex;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
 }
 
 .proLang {
@@ -131,16 +150,52 @@
   align-items: center;
 }
 
-.aboutMeContainer {
-  width: 80%;
-  max-width: 600px;
-  margin: auto;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
-  border: 1px solid rgba(255, 255, 255, 0.4); /* Light border */
+/* Styling for the wrapper around picture and text */
+.aboutMeWrapper {
+  display: flex;
+  flex-direction: row; /* Place them side-by-side */
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent dark background */
   border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
-  backdrop-filter: blur(10px); /* Glassmorphism blur */
-  text-align: center;
-  color: white; /* White text for contrast */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  max-width: 1600px;
+  margin: 2rem auto; /* center horizontally with some vertical margin */
+}
+
+/* Style for the picture container */
+.aboutMePic {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutMePic img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Style for the text container */
+.aboutMeText {
+  flex: 1;
+  color: white;
+  padding: 1rem;
+}
+
+.aboutMeText h2 {
+  margin: 0 0 1rem;
+  font-size: 2.5rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.aboutMeText p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }

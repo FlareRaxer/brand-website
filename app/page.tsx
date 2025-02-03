@@ -2,56 +2,10 @@
 import React, { useEffect, useState } from 'react';
 import styles from './styles/page.module.css';
 
-function randPercent() {
-  return Math.floor(Math.random() * 90);
-}
-
-function inHeroBox(top: number, left: number) {
-  return top >= 30 && top <= 60 && left >= 25 && left <= 75;
-}
-
-function getRandomPosOutsideHero() {
-  let top: number, left: number;
-  do {
-    top = randPercent();
-    left = randPercent();
-  } while (inHeroBox(top, left));
-  return {
-    top: top + '%',
-    left: left + '%',
-  };
-}
-
-function Particles() {
-  const [smallParticles] = useState(() =>
-    Array.from({ length: 50 }, () => getRandomPosOutsideHero())
-  );
-  const [mediumParticles] = useState(() =>
-    Array.from({ length: 35 }, () => getRandomPosOutsideHero())
-  );
-  const [largeParticles] = useState(() =>
-    Array.from({ length: 20 }, () => getRandomPosOutsideHero())
-  );
-
-  return (
-    <>
-      {smallParticles.map((pos, i) => (
-        <div key={'sm-' + i} className={`${styles.particle} ${styles.sm}`} style={pos} />
-      ))}
-      {mediumParticles.map((pos, i) => (
-        <div key={'md-' + i} className={`${styles.particle} ${styles.md}`} style={pos} />
-      ))}
-      {largeParticles.map((pos, i) => (
-        <div key={'lg-' + i} className={`${styles.particle} ${styles.lg}`} style={pos} />
-      ))}
-    </>
-  );
-}
-
 export default function Home() {
   const [typedText, setTypedText] = useState('');
   const [showCursor, setShowCursor] = useState(false);
-  const fullText = 'Scharling Studio';
+  const fullText = 'SCHARLING STUDIO';
   const typingSpeed = 100;
 
   useEffect(() => {
@@ -71,22 +25,25 @@ export default function Home() {
   return (
     <>
       <div className={styles.frontContainer}>
-        <Particles />
         <div className={styles.hero}>
           <h1 className={styles.heroText}>
             {typedText}
             {showCursor && <span className={styles.blinkingCursor}>_</span>}
           </h1>
+          <p className={styles.heroSubText}>Frontendudvikling & Flutter</p>
         </div>
       </div>
 
       <section className={styles.aboutMe}>
-        <h2>Section 1</h2>
-        <p>Content for section 1</p>
-        <div className={styles.aboutMeContainer}>
-          <img src="/images/me_forside.jpg" alt="Profilbillede" />
+        <div className={styles.aboutMeWrapper}>
+          <div className={styles.aboutMePic}>
+            <img src="/images/meFace.png" alt="Profilbillede" />
+          </div>
+          <div className={styles.aboutMeText}>
+            <h2>Jonas Jensen</h2>
+            <p>Jeg er uddannet multimediedesigner fra UCL Odense. Jeg er en frontendudvikler og Flutter udvikler, der elsker at skabe brugervenlige og intuitive brugergrænseflader. Jeg har erfaring med React, Next.js, Vue, Figma, Firebase og meget mere.</p>
+          </div>
         </div>
-
       </section>
 
       <section className={styles.proLang}>
