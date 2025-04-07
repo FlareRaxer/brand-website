@@ -29,6 +29,14 @@ h2 {
   color: #c8efff;
 }
 
+h3 {
+  color: #c8efff;
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
 p {
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: 300;

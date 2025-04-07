@@ -25,39 +25,6 @@
   align-items: center;
 }
 
-.particle {
-  position: absolute;
-  border-radius: 100%;
-  background-color: #ffffff;
-  opacity: 0.4;
-  /* Smoothly transition to new positions */
-  transition: top 1s linear, left 1s linear;
-  animation: starBlink 4s infinite ease-in-out;
-}
-
-/* Three sizes for the particles */
-.sm {
-  width: 6px;
-  height: 6px;
-}
-.md {
-  width: 10px;
-  height: 10px;
-}
-.lg {
-  width: 14px;
-  height: 14px;
-}
-
-@keyframes starBlink {
-  0%, 100% {
-    opacity: 0.4;
-  }
-  50% {
-    opacity: 0.8;
-  }
-}
-
 .hero {
   position: relative;
   z-index: 1;
@@ -112,32 +79,205 @@
 .aboutMe {
   position: relative;
   width: 100%;
-  background: linear-gradient(#001f3f, #002848);
-  justify-content: center;
-  align-items: center;
+  background: linear-gradient(#001f3f, #000f23);
   display: flex;
-  grid-template-columns: 1fr 1fr;
+  flex-direction: column; /* Stack children vertically */
+  justify-content: flex-start; /* Start from the top */
+  align-items: center;
+  padding: 3rem 0;
+}
+
+.aboutMeWrapper {
+  background-color: rgba(0, 40, 80, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 2rem;
+  max-width: 1600px;
+  width: 90%;
+  margin: 0 auto;
+  padding: clamp(1rem, 3vw, 3rem);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
 
 .proLang {
-  display: flex;
   position: relative;
   width: 100%;
-  height: 100vh;
-  background: linear-gradient(#002848, #001e34);
+  background: linear-gradient(#000f23, #000f23);
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 3rem 0;
 }
 
-.contactMe {
+.sectionTitle {
+  font-size: 4rem;
+  color: #c8efff;
+  text-align: center;
+  margin-bottom: 1rem; /* Reduced from 3rem to create better spacing */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.proLangWrapper {
+  background-color: rgba(0, 40, 80, 0.7);
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1600px;
+  width: 90%;
+  margin: 0 auto;
+  padding: clamp(1rem, 3vw, 3rem);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.aboutDarkWrapper {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start; 
+  gap: 2rem; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.techBox {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 1.5rem;
+  width: calc(33.333% - 2rem); /* 3 boxes per row on desktop */
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.techBox:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.techBox img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.techBox h3 {
+  color: #c8efff;
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+
+.techBox p {
+  color: #f5f5f5;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .techBox {
+    width: calc(50% - 2rem); /* 2 boxes per row on tablet */
+  }
+}
+
+@media (max-width: 768px) {
+  .techBox {
+    width: 100%; /* 1 box per row on mobile */
+    max-width: 400px;
+  }
+}
+
+.myCertificates {
   position: relative;
   width: 100%;
-  height: 100vh;
-  background: linear-gradient(#001e34, #001a2a);
-  justify-content: center;
+  background:#000f23;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
+  padding: 3rem 0;
+}
+
+.certificatesWrapper {
+  background-color: rgba(0, 40, 80, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1600px;
+  width: 90%;
+  margin: 0 auto;
+  padding: clamp(1rem, 3vw, 3rem);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.certificateDarkWrapper {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 2rem;
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.certificateContent {
+  width: 100%; /* Ensure full width */
+  display: flex;
+  flex-direction: column;
+}
+
+.certificateContent h3 {
+  color: #c8efff;
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.certificateContent p {
+  color: white;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.progressContainer {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0;
+}
+
+.progressLabel {
+  color: #c8efff;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.progressBar {
+  height: 12px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 0;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(to right, #00c853, #64dd17);
+  border-radius: 6px;
+  transition: width 0.5s ease;
 }
 
 .endingFooter {
@@ -145,57 +285,172 @@
   position: relative;
   width: 100%;
   height: 100vh;
-  background: linear-gradient(#001a2a, #001520);
+  background: linear-gradient(#000f23, #000f23);
   justify-content: center;
   align-items: center;
 }
 
-/* Styling for the wrapper around picture and text */
-.aboutMeWrapper {
-  display: flex;
-  flex-direction: row; /* Place them side-by-side */
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  padding: 2rem;
-  background: rgba(0, 0, 0, 0.5); /* semi-transparent dark background */
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  max-width: 1600px;
-  margin: 2rem auto; /* center horizontally with some vertical margin */
-}
-
-/* Style for the picture container */
 .aboutMePic {
-  flex: 1;
+  width: 80%;
+  max-width: 600px;
+  margin: auto;
+  border-radius: 12px;
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .aboutMePic img {
+  /* border-radius: 50%; or 20px for a soft corner rounding */
   width: 100%;
-  max-width: 600px;
+  max-width: 600px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  filter: brightness(1.1) contrast(1.1);
   border-radius: 12px;
-  object-fit: cover;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
-/* Style for the text container */
 .aboutMeText {
-  flex: 1;
-  color: white;
-  padding: 1rem;
+  flex: 1; /* Use flex to fill available space */
+  width: auto; /* Remove fixed width */
+  max-width: none; /* Remove max-width constraint */
+  margin: 0;
+  text-align: left;
+  font-size: 1.2rem;
+  color: #f5f5f5;
 }
 
 .aboutMeText h2 {
-  margin: 0 0 1rem;
-  font-size: 2.5rem;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  font-size: 2.5rem; 
+  margin-bottom: 1rem;
 }
 
 .aboutMeText p {
-  font-size: 1.2rem;
+  color: white;
+  text-align: left;
+}
+
+.aboutProjects {
+  position: relative;
+  width: 100%;
+  background: #000f23;
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  justify-content: flex-start; /* Start from the top */
+  align-items: center;
+  padding: 3rem 0;
+}
+
+.projectWrapper {
+  background-color: rgba(0, 40, 80, 0.7);
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  gap: 2rem;
+  max-width: 1600px;
+  width: 90%;
+  margin: 0 auto;
+  padding: clamp(1rem, 3vw, 3rem);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.projectDarkWrapper {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row; 
+  align-items: flex-start; 
+  gap: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  margin: 0;
+  max-width: none;
+}
+
+.projectPic {
+  width: 80%; 
+  max-width: 600px;
+  margin: 0; 
+  border-radius: 12px;
+  display: flex;
+  align-items: flex-start; 
+  justify-content: flex-start;
+}
+
+.projectPic img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  filter: brightness(1.1) contrast(1.1);
+}
+
+.projectText {
+  flex: 1; /* Fill available space */
+  width: auto; /* Remove fixed width */
+  max-width: none; /* Remove max-width */
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.projectText h3 {
+  color: #c8efff;  
+  font-size: 2rem; 
+  margin-top: 0; /* Align with top of image */
+  margin-bottom: 2rem; /* Add space before paragraph */
+  text-align: left; /* Ensure left alignment */
+}
+
+.projectText p {
+  color: white;
+  text-align: left;
+  margin-top: 0;
   line-height: 1.5;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Standardized outer wrappers */
+.aboutMeWrapper, 
+.projectWrapper, 
+.certificatesWrapper {
+  background-color: rgba(0, 40, 80, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1600px;
+  width: 90%;
+  margin: 0 auto;
+  padding: clamp(1rem, 3vw, 3rem);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* Standardized inner dark wrappers */
+.aboutDarkWrapper, 
+.projectDarkWrapper, 
+.certificateDarkWrapper {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 2rem;
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Maintain row direction for these specific wrappers */
+.aboutDarkWrapper,
+.projectDarkWrapper {
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+/* Adjust projectDarkWrapper to match other wrappers */
+.projectDarkWrapper {
+  margin: 0; /* Remove the auto margin */
+  max-width: none; /* Remove conflicting max-width */
 }
