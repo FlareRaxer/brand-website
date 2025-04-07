@@ -11,8 +11,8 @@
   "dependencies": {
     "motion": "^11.11.17",
     "next": "^15.1.4",
-    "react": "19.0.0-rc-02c0e824-20241028",
-    "react-dom": "19.0.0-rc-02c0e824-20241028",
+    "react": "18.2.0-rc-02c0e824-20241028",
+    "react-dom": "18.2.0-rc-02c0e824-20241028",
     "react-tsparticles": "^2.12.2",
     "tsparticles": "^3.7.1"
   },
