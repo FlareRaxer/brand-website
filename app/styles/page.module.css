@@ -454,3 +454,68 @@
   margin: 0; /* Remove the auto margin */
   max-width: none; /* Remove conflicting max-width */
 }
+
+/* Responsive adjustments for screens 1300px and smaller */
+@media (max-width: 1300px) {
+  .aboutDarkWrapper,
+  .projectDarkWrapper,
+  .certificateDarkWrapper {
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center align items */
+  }
+
+  .aboutMePic,
+  .projectPic {
+    width: 100%; /* Full width for images */
+    max-width: 400px; /* Limit max width */
+    margin-bottom: 1rem; /* Add spacing below image */
+  }
+
+  .aboutMeText,
+  .projectText,
+  .certificateContent {
+    text-align: center; /* Center align text */
+  }
+
+  .aboutMeText h2,
+  .projectText h3,
+  .certificateContent h3 {
+    margin-top: 1rem; /* Add spacing above heading */
+  }
+
+  .aboutMeText p,
+  .projectText p,
+  .certificateContent p {
+    margin-top: 0.5rem; /* Add spacing above paragraph */
+  }
+}
+
+/* Responsive adjustments for screens 768px and smaller (mobile) */
+@media (max-width: 768px) {
+  .aboutDarkWrapper,
+  .projectDarkWrapper,
+  .certificateDarkWrapper {
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center align items */
+  }
+
+  .aboutMePic,
+  .projectPic {
+    order: 1; /* Place images at the top */
+    margin-bottom: 1rem; /* Add spacing below image */
+  }
+
+  .aboutMeText h2,
+  .projectText h3,
+  .certificateContent h3 {
+    order: 2; /* Place headings after images */
+    margin-bottom: 0.5rem; /* Add spacing below heading */
+  }
+
+  .aboutMeText p,
+  .projectText p,
+  .certificateContent p {
+    order: 3; /* Place paragraphs last */
+    margin-top: 0.5rem; /* Add spacing above paragraph */
+  }
+}

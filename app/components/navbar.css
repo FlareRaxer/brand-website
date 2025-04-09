@@ -1,34 +1,59 @@
+/* Navbar styles */
 nav {
-    background: rgba(42, 69, 75, 0.31);
-    background: linear-gradient(180deg, rgba(42, 69, 75, 0.31) 0%, rgba(41, 72, 97, 0.31) 100%);
-    backdrop-filter: blur(50px);
-    padding: 1rem;
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 10;
-  }
-  
-  ul {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-    margin: 0;
-    padding: 0;
-  }
-  
-  li {
-    color: rgb(239, 52, 186);
-  }
-  
-  a {
-    color: rgb(63, 186, 44);
-    text-decoration: none;
-    font-size: 1.2rem;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 31, 63, 0.97);
+  padding: 0.5rem;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.05em;
+  justify-content: center;
+}
+
+nav ul li {
+  cursor: pointer;
+  padding: 0rem 1rem;
+  color: white;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li:hover {
+  color: #c8efff;
+}
+
+nav ul li.active {
+  color: #c8efff;
+  font-weight: 500;
+  border-bottom: 2px solid #c8efff; /* Add a bottom border to indicate the active section */
+}
+
+/* Section background alternation */
+.aboutMe {
+  background: #001f3f;
+}
+
+.aboutProjects {
+  background: #002b5c;
+}
+
+.proLang {
+  background: #001f3f;
+}
+
+.myCertificates {
+  background: #002b5c;
+}
+
+.endingFooter {
+  background: #001f3f;
+}

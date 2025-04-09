@@ -34,15 +34,15 @@ export default function Home() {
         </div>
       </div>
 
-      <section className={styles.aboutMe}>
-      <h2 className={styles.sectionTitle}>Hvem er jeg, Jonas Jensen?</h2>
+      <section id="aboutMe" className={styles.aboutMe}>
+        <h2 className={styles.sectionTitle}>Hvem er jeg?</h2>
         <div className={styles.aboutMeWrapper}>
           <div className={styles.aboutDarkWrapper}>
             <div className={styles.aboutMePic}>
               <img src="/images/meFace.png" alt="Profilbillede" />
             </div>
             <div className={styles.aboutMeText}>
-              <h3>Jonas Jensen</h3>
+              <h3>Jeg er Jonas Jensen</h3>
               <p>Jeg er uddannet multimediedesigner fra UCL Odense. Jeg er en frontendudvikler og Flutter udvikler, der elsker at skabe brugervenlige og intuitive brugergrænseflader. Jeg har erfaring med React, Vue, Figma, Firebase og meget mere. 
                 <br/>
                 <br/>
@@ -52,8 +52,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={styles.aboutProjects}>
-      <h2 className={styles.sectionTitle}>Udvalgte projekter</h2>
+      <section id="aboutProjects" className={styles.aboutProjects}>
+        <h2 className={styles.sectionTitle}>Udvalgte projekter</h2>
         <div className={styles.projectWrapper}>
           <div className={styles.projectDarkWrapper}>
             <div className={styles.projectPic}>
@@ -76,7 +76,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={styles.proLang}>
+      <section id="proLang" className={styles.proLang}>
         <h2 className={styles.sectionTitle}>Teknologier & Værktøjer</h2>
         
         <div className={styles.proLangWrapper}>
@@ -123,7 +123,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={styles.myCertificates}>
+      <section id="myCertificates" className={styles.myCertificates}>
         <h2 className={styles.sectionTitle}>Certificates</h2>
         <div className={styles.certificatesWrapper}>
           <div className={styles.certificateDarkWrapper}>
@@ -131,7 +131,7 @@ export default function Home() {
               <h3>IBM Backend Professional Certificate</h3>
               <p>Comprehensive training in backend development including server-side programming, APIs, databases, and cloud deployment with IBM&apos;s best practices.</p>
               <div className={styles.progressContainer}>
-                <div className={styles.progressLabel}>50% Complete</div>
+                <div className={styles.progressLabel}>50% Gennemført</div>
                 <div className={styles.progressBar}>
                   <div className={styles.progressFill} style={{width: '50%'}}></div>
                 </div>
@@ -154,7 +154,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={styles.endingFooter}>
+      <section id="endingFooter" className={styles.endingFooter}>
         <h2>Kontakt mig</h2>
         <p>Content for section 4</p>
       </section>
