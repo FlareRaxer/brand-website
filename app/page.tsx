@@ -23,13 +23,13 @@ export default function Home() {
   }, [fullText, typingSpeed]);
 
   // Helper for tech skill level
-  const skillLevels = {
+  /*const skillLevels = {
     Beginner: { color: "#f534f5" },
     Intermediate: { color: "#c8efff" },
     Advanced: { color: "#00c853" },
     Common: { color: "#ffd600" }
   };
-
+*/
   return (
     <>
       <div className={styles.frontContainer}>
