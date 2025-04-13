@@ -22,6 +22,14 @@ export default function Home() {
     return () => clearInterval(interval);
   }, [fullText, typingSpeed]);
 
+  // Helper for tech skill level
+  const skillLevels = {
+    Beginner: { color: "#f534f5" },
+    Intermediate: { color: "#c8efff" },
+    Advanced: { color: "#00c853" },
+    Common: { color: "#ffd600" }
+  };
+
   return (
     <>
       <div className={styles.frontContainer}>
@@ -78,48 +86,47 @@ export default function Home() {
 
       <section id="proLang" className={styles.proLang}>
         <h2 className={styles.sectionTitle}>Teknologier & Værktøjer</h2>
-        
         <div className={styles.proLangWrapper}>
           <div className={styles.techBox}>
             <h3>Vue & React</h3>
+
             <p>Frontend JavaScript-bibliotek til udvikling af brugergrænseflader.</p>
           </div>
-          
           <div className={styles.techBox}>
             <h3>Flutter</h3>
+
             <p>React framework til produktion med server-side rendering.</p>
           </div>
-
           <div className={styles.techBox}>
             <h3>Firebase</h3>
+
             <p>Google&apos;s UI toolkit til at bygge native apps fra én kodebase.</p>
           </div>
-          
           <div className={styles.techBox}>
             <h3>Wordpress</h3>
+
             <p>Design værktøj til prototyping og samarbejde.</p>
           </div>
-          
           <div className={styles.techBox}>
             <h3>Rest API</h3>
+
             <p>Googles platform til mobil- og webapplikationsudvikling.</p>
           </div>
-          
           <div className={styles.techBox}>
             <h3>Python</h3>
+
             <p>Utility-first CSS framework til hurtig UI-udvikling.</p>
           </div>
-
           <div className={styles.techBox}>
-            <h3>Kubernetes & Docker</h3>
+            <h3>Kubernetes </h3>
+
             <p>Utility-first CSS framework til hurtig UI-udvikling.</p>
           </div>
-
           <div className={styles.techBox}>
-            <h3>Cybersecurity</h3>
+            <h3>Flask</h3>
+ 
             <p>Utility-first CSS framework til hurtig UI-udvikling.</p>
           </div>
-
         </div>
       </section>
 
@@ -138,7 +145,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-          
           <div className={styles.certificateDarkWrapper}>
             <div className={styles.certificateContent}>
               <h3>Google Cybersecurity Professional Certificate</h3>
@@ -155,8 +161,52 @@ export default function Home() {
       </section>
 
       <section id="endingFooter" className={styles.endingFooter}>
-        <h2>Kontakt mig</h2>
-        <p>Content for section 4</p>
+        <h2 className={styles.sectionTitle}>Kontakt mig</h2>
+        <div className={styles.endingWrapper}>
+          <div className={styles.endingDarkWrapper}>
+            <p className={styles.endingText}>
+              Du er meget velkommen til at kontakte mig, hvis du har spørgsmål, ønsker et samarbejde, eller bare vil sige hej! Brug knapperne nedenfor for at ringe, sende en mail, eller besøge min GitHub eller LinkedIn.
+            </p>
+              <div className={styles.footerLink}>
+                <a
+                  href="tel:YOUR_PHONE_NUMBER"
+                  className={styles.footerIconLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Phone"
+                >
+                  Phone
+                </a>
+                <a
+                  href="mailto:YOUR_EMAIL"
+                  className={styles.footerIconLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Email"
+                >
+                  Email
+                </a>
+                <a
+                  href="https://github.com/YOUR_GITHUB"
+                  className={styles.footerIconLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                >
+                  GitHub
+                </a>
+                <a
+                  href="https://linkedin.com/in/YOUR_LINKEDIN"
+                  className={styles.footerIconLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                >
+                  LinkedIn
+                </a>
+              </div>
+            </div>
+        </div>
       </section>
     </>
   );
