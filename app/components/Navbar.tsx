@@ -98,30 +98,35 @@ const Navbar = () => {
           <li
             className={activeSection === 'aboutMe' ? 'active' : ''}
             onClick={() => scrollToSection('aboutMe')}
+            data-text="About Me"
           >
             Hvem er jeg?
           </li>
           <li
             className={activeSection === 'aboutProjects' ? 'active' : ''}
             onClick={() => scrollToSection('aboutProjects')}
+            data-text="Projects"
           >
             Projekter
           </li>
           <li
             className={activeSection === 'proLang' ? 'active' : ''}
             onClick={() => scrollToSection('proLang')}
+            data-text="Technologies"
           >
             Teknologier
           </li>
           <li
             className={activeSection === 'myCertificates' ? 'active' : ''}
             onClick={() => scrollToSection('myCertificates')}
+            data-text="Certificates"
           >
             Certificates
           </li>
           <li
             className={activeSection === 'endingFooter' ? 'active' : ''}
             onClick={() => scrollToSection('endingFooter')}
+            data-text="Contact"
           >
             Kontakt
           </li>

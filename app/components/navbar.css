@@ -4,10 +4,10 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(0, 31, 63, 0.85);
+  background: rgba(0, 31, 63, 0.90);
   backdrop-filter: blur(8px);
   box-shadow: 0 4px 24px rgba(0,0,0,0.18);
-  border-radius: 0 0 18px 18px;
+  border-radius: 0 0 6px 6px;
   z-index: 1000;
   padding: 0.5rem 2rem;
   display: flex;
@@ -88,8 +88,22 @@
   border-radius: 12px;
   transition: color 0.3s, background 0.3s, box-shadow 0.3s;
   position: relative;
-  font-weight: 400;
+  font-weight: 600;
+  /* Add this to prevent text shifting */
+  text-rendering: geometricPrecision;
 }
+
+/* Create a pseudo-element with the bold text to "reserve" the space */
+.navbar-menu li::after {
+  content: attr(data-text);
+  display: block;
+  font-weight: 600;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  position: absolute;
+}
+
 .navbar-menu li:hover,
 .navbar-menu li.active {
   color: #001f3f;

@@ -1,0 +1,128 @@
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 15, 35, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 2rem;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.modalContent {
+  background: rgba(0, 40, 80, 0.7);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  width: 90%;
+  max-width: 1000px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: scaleIn 0.3s ease-out;
+}
+
+.closeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  background: rgba(0, 0, 0, 0.2);
+  color: #c8efff;
+  border: none;
+  font-size: 2rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s, color 0.3s;
+  z-index: 10;
+}
+
+.closeButton:hover {
+  background: #c8efff;
+  color: #001f3f;
+  transform: rotate(90deg);
+}
+
+.modalImageContainer {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+}
+
+.modalImageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modalTextContent {
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 12px 12px;
+}
+
+.modalTextContent h3 {
+  color: #c8efff;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.modalTextContent p {
+  color: white;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.contentText {
+  color: white;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.contentImageContainer {
+  width: 100%;
+  margin: 1.5rem 0 2.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.contentImage {
+  width: 100%;
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .modalContent {
+    width: 95%;
+  }
+  
+  .modalImageContainer {
+    height: 200px;
+  }
+  
+  .modalTextContent {
+    padding: 1.5rem;
+  }
+}
