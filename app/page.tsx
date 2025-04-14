@@ -74,13 +74,13 @@ export default function Home() {
     {
       id: 2,
       title: "Eksamensopgave",
-      description: "Min eksamensopgave fokuserede på at udvikle en innovativ løsning med Vue.js, Node.js og MongoDB.",
-      image: "/images/efterskole.jpg",
+      description: "Min eksamensopgave på multimediedesigneruddannelsen fokuserede på at opdatere fra Nuxt 2 til Nuxt 3 på en allerede eksisterende hjemmeside. Et redesign af den eksisterende hjemmeside blev også udført.",
+      image: "/images/metteMunk.png",
       altText: "Eksamensopgave",
       content: [
         {
           type: "text" as const,
-          content: "Min eksamensopgave fokuserede på at udvikle en innovativ løsning til online undervisning. Jeg anvendte moderne teknologier som Vue.js, Node.js og MongoDB for at skabe et komplet produkt."
+          content: "Min eksamensopgave på multimediedesigneruddannelsen fokuserede på at opdatere fra Nuxt 2 til Nuxt 3 på en allerede eksisterende hjemmeside. Et redesign af den eksisterende hjemmeside blev også udført."
         },
         {
           type: "image" as const,
@@ -307,6 +307,15 @@ export default function Home() {
                 aria-label="LinkedIn"
               >
                 LinkedIn
+              </a>
+              <a
+                href="/cv.pdf"
+                className={styles.footerIconLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                Download CV
               </a>
             </div>
           </div>

@@ -415,22 +415,21 @@
   padding: 3rem 0;
 }
 
-/* Footer styles */
+/* Footer styles - update these properties */
 .footerLink {
   display: flex;
-  flex-direction: row;
-  gap: 3.5rem;
+  flex-direction: row; /* Default horizontal layout */
+  gap: 1.5rem; /* Reduced gap to fit all items */
   align-items: center;
   justify-content: center;
-  margin-top: 2.5rem;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   width: 100%;
-  max-width: 1000px;
+  max-width: 1200px; /* Increased max-width to fit all buttons side by side */
 }
 
 .footerIconLink {
   cursor: pointer;
-  padding: 0.8rem 2rem;
+  padding: 0.8rem 1rem;
   border-radius: 12px;
   transition: color 0.3s, background 0.3s, box-shadow 0.3s, transform 0.3s;
   position: relative;
@@ -440,10 +439,14 @@
   text-decoration: none;
   text-align: center;
   border: 1px solid rgba(200, 239, 255, 0.1);
-  min-width: 130px;
+  min-width: 150px; /* Set fixed width for all buttons */
+  width: 200px; /* Fixed width to make them all the same size */
   font-weight: 600;
   background: #c8efff;
   color: #001f3f;
+  display: flex; /* Add flex display */
+  justify-content: center; /* Center text horizontally */
+  align-items: center; /* Center text vertically */
 }
 
 /* Standardized outer wrappers */
@@ -576,12 +579,24 @@
   .certificateContent p {
     order: 2;
   }
+
+  /* Add this to make footer links vertical */
+  .footerLink {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .footerIconLink {
+    width: 220px; /* Wider buttons on mobile for better touch targets */
+    max-width: 100%; /* Ensure they don't overflow */
+  }
 }
 
 /* Responsive adjustments for screens 900px and smaller */
 @media (max-width: 900px) {
   .footerLink {
-    gap: 2rem;
+    gap: 1rem;
   }
   .endingFooter {
     padding: 2rem 0 1rem 0;
@@ -594,14 +609,10 @@
 
 /* Responsive adjustments for screens 600px and smaller */
 @media (max-width: 800px) {
-  .footerLink {
-    flex-direction: row;
-    gap: 1.2rem;
-  }
-
   .footerIconLink {
-    min-width: 70px;
-    padding: 0.7rem 0.4rem 0.7rem 0.4rem;
+    width: 180px;
+    min-width: 180px;
+    padding: 0.7rem 0.5rem;
     font-size: 1.1rem;
   }
 
