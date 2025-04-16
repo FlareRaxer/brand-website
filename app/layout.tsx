@@ -15,7 +15,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Scharling",
+  title: "Scharling Portfolio",
   description: "Jonas Jensen's Portfolio",
   icons: {
     icon: '/images/NewLogo.png',

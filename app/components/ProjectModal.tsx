@@ -45,7 +45,10 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
           {project.content.map((section, index) => (
             <React.Fragment key={index}>
               {section.type === 'text' ? (
-                <p className={styles.contentText}>{section.content}</p>
+                <p 
+                  className={styles.contentText}
+                  dangerouslySetInnerHTML={{ __html: section.content }}
+                ></p>
               ) : (
                 <div className={styles.contentImageContainer}>
                   <img 

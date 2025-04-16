@@ -18,6 +18,25 @@ interface Project {
   content: ContentSection[]; // Array of content sections for the modal
 }
 
+const SkillLevel = ({ level }: { level: 'beginner' | 'intermediate' | 'advanced' }) => {
+  return (
+    <div className={styles.skillLevelContainer}>
+      {/* Always active */}
+      <div className={`${styles.skillLevel} ${styles.skillBeginner} ${styles.skillActive}`}></div>
+      
+      {/* Active for intermediate and advanced */}
+      <div className={`${styles.skillLevel} ${styles.skillIntermediate} ${
+        level === 'beginner' ? styles.skillInactive : styles.skillActive
+      }`}></div>
+      
+      {/* Active only for advanced */}
+      <div className={`${styles.skillLevel} ${styles.skillAdvanced} ${
+        level === 'advanced' ? styles.skillActive : styles.skillInactive
+      }`}></div>
+    </div>
+  );
+};
+
 export default function Home() {
   const [typedText, setTypedText] = useState('');
   const [showCursor, setShowCursor] = useState(false);
@@ -43,7 +62,7 @@ export default function Home() {
     {
       id: 1,
       title: "Praktikopgave",
-      description: "Under min praktik lavede jeg en afsluttende opgave, hvor den eksisterende app skulle automatiseres mest muligt. App'en er lavet i Flutter og Firebase.",
+      description: "Under min praktik lavede jeg en afsluttende opgave, hvor den eksisterende app skulle automatiseres mest muligt. App'en er lavet i Flutter og Firebase, og deployed til web og Android",
       image: "/images/efterskoleLogin.png",
       altText: "Praktikopgave",
       content: [
@@ -58,16 +77,16 @@ export default function Home() {
         },
         {
           type: "text" as const,
-          content: "Gennem projektet erhvervede jeg praktisk erfaring med state management, UI-design principper og sikkerhedsimplementering. Dette projekt har ikke kun styrket mine tekniske færdigheder inden for frontend-udvikling og databasehåndtering, men også givet mig værdifuld indsigt i agile udviklingsprocesser."
+          content: "Projektet gik ud på at lave en Admin side baseret på en allerede eksisterende app. Hver skole skulle kunne administrere mest muligt selv, og se relevant data i et enkelt og simpelt format, der læner sig op af den eksisterende app.<br/><br/> Da den eksisterende app var skrevet i Flutter 2.X var det nødvendigt at skrive den nye app fra bunden i Flutter 3.26+. Da al data og backend lå på en eksisterende Firbase/Firestore, så kunne meget nemt importeres og implementeres. <br/><br/>Den største udfordring var at implementere og lave graferne som ses på billedet ovenover. Databasen hvor brugerne ligger skulle opdateres for at graferne ville virke efter hensigten. Herunder udvide brugardatabasen med flere kategorier.<br/><br/> Herefter blev Mentor siden lavet. På denne side kan den enkelte skole nemt acceptere nye mentoranmodninger, se eksisterende godkendte mentorer og fjerne dem igen. Endvidere kan man se hvornår hver mentor sidst har været logget på."
         },
         {
           type: "image" as const,
-          content: "/images/praktik-screenshot2.jpg",
-          altText: "Application UI design"
+          content: "/images/efmentor.png",
+          altText: "Mentor admin side"
         },
         {
           type: "text" as const,
-          content: "En af de større udfordringer var at implementere realtids-synkronisering mellem forskellige enheder, hvilket jeg løste ved at bruge Firebase Realtime Database og omhyggelig state management."
+          content: "Denne praktikopgave har været enorm spændende og udfordrende. Først og fremmest har det givet mig en god forståelse og en solid base omkring Flutter/Dart. Det har opgså givet mig en god forståelse for, hvordan Flutter bruger dependencies. Ydermere har jeg lært meget om, hvad og hvordan Firebase og dets muligheder kan bruges i samspil mellem apps og web. <br/><br/> Da tiden var knap var der flere ting jeg ikke nåede at kaste mig ud i, blandt andet CORE i Firebase. <br/><br/> Baseret på en 3 måneders praktik, hvor den første måned gik med at lære Flutter. 1 måned på selvvalgt projekt og 1 måned på praktikopgaven, så er jeg ganske tilfreds med resultatet. Og dette projekt har givet mig en solid forståelse og et godt fundamnet til at arbejde mere i Flutter/Dart"
         }
       ]
     },
@@ -80,25 +99,25 @@ export default function Home() {
       content: [
         {
           type: "text" as const,
-          content: "Min eksamensopgave på multimediedesigneruddannelsen fokuserede på at opdatere fra Nuxt 2 til Nuxt 3 på en allerede eksisterende hjemmeside. Et redesign af den eksisterende hjemmeside blev også udført."
+          content: "Min eksamensopgave på multimediedesigneruddannelsen fokuserede på at opdatere fra Nuxt 2 til Nuxt 3 på en allerede eksisterende hjemmeside. Et redesign af den eksisterende hjemmeside blev også udført. <br/><br/> Det var sjovt og udfordrende at tage en side som er live,og opdatere frameworken. Særdeles udfordrende, men utrolig lærerigt"
         },
         {
           type: "image" as const,
-          content: "/images/praktik-screenshot1.jpg",
+          content: "/images/data.png",
           altText: "Eksamensopgave wireframes"
         },
         {
           type: "text" as const,
-          content: "Projektet krævede omfattende research, wireframing, prototyping og testing for at sikre en optimal brugeroplevelse. Særligt udfordrende var implementeringen af realtidskommunikation mellem brugere, som krævede kreativ problemløsning og fordybelse i websockets."
+          content: "Projektet krævede research, wireframing, prototyping og testing for at sikre en optimal brugeroplevelse. Det var også udfordrende at der på den eksisterende side ikke eksisterede noget data omkring brugerne. Derfor skulle vi starte fra bunden, selvom hjemmesiden var live. Dette var en sjov og anderledes udfordring.<br/><br/> "
         },
         {
           type: "image" as const,
-          content: "/images/praktik-screenshot2.jpg",
-          altText: "Eksamensopgave interface"
+          content: "/images/redesign.png",
+          altText: "Eksamensopgave redesign"
         },
         {
           type: "text" as const,
-          content: "Jeg er især stolt af det intuitive brugerinterface som demonstrerer min evne til at kombinere teknisk kunnen med brugervenligt design. Projektet fik stor ros for brugervenlighed og teknisk implementering."
+          content: "Projektet fik stor ros for brugervenlighed og teknisk implementering. Derudover gav projektet mig en god forståelse for hvad Vue er og hvilke muligheder Vue & Nuxt giver. Ligeledes gav det en bred forståelse for, hvrodan komplekse sider er sat sammen"
         }
       ]
     },
@@ -111,11 +130,11 @@ export default function Home() {
       content: [
         {
           type: "text" as const,
-          content: "Dette portfolio website er bygget med Next.js og React for at skabe en hurtig, responsiv og moderne præsentation af mine projekter og kompetencer. Jeg har lagt særlig vægt på performance, tilgængelighed og brugervenligt design."
+          content: "Dette portfolio website er inspireret af havet. Fra du rammer vandet, til du dykker længere ned, hvor lyset langsomt forsvinder og en ny verden åbner sig. Bygget med Next.js og React for at skabe en hurtig, responsiv og moderne præsentation af mine projekter og kompetencer."
         },
         {
           type: "image" as const,
-          content: "/images/praktik-screenshot1.jpg",
+          content: "/images/portscroll.png",
           altText: "Portfolio design process"
         },
         {
@@ -124,12 +143,12 @@ export default function Home() {
         },
         {
           type: "image" as const,
-          content: "/images/praktik-screenshot2.jpg",
+          content: "/images/mobile.png",
           altText: "Portfolio responsive design"
         },
         {
           type: "text" as const,
-          content: "Siden er hosted på Vercel for optimal performance og pålidelighed. Udviklingsprocessen fokuserede på moderne web-standarder, SEO-optimering og en brugervenlig oplevelse."
+          content: "Siden er min første hjemmeside i React, og har derfor også lagt grundlaget for min forståelse af React og Next.js."
         }
       ]
     },
@@ -166,10 +185,12 @@ export default function Home() {
             </div>
             <div className={styles.aboutMeText}>
               <h3>Jeg er Jonas Jensen</h3>
-              <p>Jeg er uddannet multimediedesigner fra UCL Odense. Jeg er en frontendudvikler og Flutter udvikler, der elsker at skabe brugervenlige og intuitive brugergrænseflader. Jeg har erfaring med React, Vue, Figma, Firebase og meget mere. 
-                <br/>
-                <br/>
-                Derudover er jeg igang med at tage IBM Backend Professional Certificate & Google Cybersecurity Professional Certificate på Coursera</p>
+              <p>Som uddannet multimediedesigner fra UCL Odense kombinerer jeg kreativ tænkning med teknisk præcision i alt mit arbejde. Min passion ligger i at udvikle intuitive brugergrænseflader og skabe digitale oplevelser, der både imponerer visuelt og fungerer optimalt.
+                <br/><br/>
+                Jeg har specialiseret mig i frontend-udvikling med React og Vue.js samt cross-platform app-udvikling med Flutter. Min erfaring spænder fra design i Figma til implementering af Firebase-løsninger og komplekse API-integrationer. Jeg trives i krydsfeltet mellem design og kode, hvor jeg kan kombinere det æstetiske med det funktionelle.
+                <br/><br/>
+                For at udvide min tekniske værktøjskasse er jeg i gang med IBM Backend Professional Certificate og Google Cybersecurity Professional Certificate, hvilket giver mig en omfattende forståelse for hele den digitale værdikæde – fra brugerens første interaktion til databasens sikre forvaltning af data.
+              </p>
             </div>
           </div>
         </div>
@@ -202,7 +223,11 @@ export default function Home() {
           <div className={styles.certificateDarkWrapper}>
             <div className={styles.certificateContent}>
               <h3>IBM Backend Professional Certificate</h3>
-              <p>Comprehensive training in backend development including server-side programming, APIs, databases, and cloud deployment with IBM&apos;s best practices.</p>
+              <p>
+                Dette omfattende kursusforløb udvikler mine færdigheder inden for backend-udvikling gennem 11 specialiserede kurser. Jeg lærer at arbejde med professionelle værktøjer som Linux scripting, Git, Python, SQL, Django, Docker, Kubernetes & OpenShift. <br/><br/> 
+                Kurset dækker også mikroservices, serverless arkitektur, applikationssikkerhed og monitorering - alt det, der driver moderne web- og mobilapplikationer. Gennem praktiske projekter bygger jeg erfaring med at udvikle server-side systemer & API&apos;er, der forbinder frontends med databaser & eksterne tjenester. <br/><br/>
+                Hvis du ønsker at se mere omkring kurset kan du se det <a href="https://www.coursera.org/professional-certificates/ibm-backend-development" target="_blank" rel="noopener noreferrer" className={styles.certificateLink}>her</a>.
+              </p>
               <div className={styles.progressContainer}>
                 <div className={styles.progressLabel}>50% Gennemført</div>
                 <div className={styles.progressBar}>
@@ -214,7 +239,11 @@ export default function Home() {
           <div className={styles.certificateDarkWrapper}>
             <div className={styles.certificateContent}>
               <h3>Google Cybersecurity Professional Certificate</h3>
-              <p>Training in cybersecurity fundamentals including network security, encryption, threat detection, and security protocols.</p>
+              <p>
+                Dette certificeringsprogram fra Google giver mig et godt overblik og en fundamental forståelse for cybersikkerhed gennem 8 specialiserede kurser. Jeg lærer essentielle færdigheder inden for netværkssikkerhed, kryptering, trusselsdetektion og sikkerhedsprotokoller. <br/><br/>
+                Kurset dækker praktiske værktøjer som Python, Linux, SQL og SIEM-systemer, der er afgørende i moderne sikkerhedsanalyse. Gennem praktiske øvelser arbejder jeg med virkelighedsnære scenarier, hvor jeg implementerer sikkerhedsforanstaltninger mod trusler som phishing, malware og uautoriseret adgang. <br/><br/>
+                Hvis du ønsker at se mere omkring kurset kan du se det <a href="https://www.coursera.org/professional-certificates/google-cybersecurity" target="_blank" rel="noopener noreferrer" className={styles.certificateLink}>her</a>.
+              </p>
               <div className={styles.progressContainer}>
                 <div className={styles.progressLabel}>Lige begyndt</div>
                 <div className={styles.progressBar}>
@@ -231,35 +260,43 @@ export default function Home() {
         <div className={styles.proLangWrapper}>
           <div className={styles.techBox}>
             <h3>Vue & React</h3>
-            <p>Frontend JavaScript-bibliotek til udvikling af brugergrænseflader.</p>
+            <p>JavaScript-frameworks med komponent-baseret arkitektur og effektiv state management. Min eksamensopgave er lavet i Vue. Min portfolio er lavet i React</p>
+            <SkillLevel level="advanced" />
           </div>
           <div className={styles.techBox}>
             <h3>Flutter</h3>
-            <p>React framework til produktion med server-side rendering.</p>
+            <p>Google&apos;s UI-toolkit til at udvikle native apps til Android, iOS, web og desktop fra én fælles kodebase med Dart. Blandt andet min praktikopgave er lavet i Flutter.</p>
+            <SkillLevel level="advanced" />
           </div>
           <div className={styles.techBox}>
             <h3>Firebase</h3>
-            <p>Google&apos;s UI toolkit til at bygge native apps fra én kodebase.</p>
+            <p>En komplet backend-as-a-service platform fra Google med realtidsdatabase, authentication, hosting og cloud functions til hurtig app-udvikling.</p>
+            <SkillLevel level="intermediate" />
           </div>
           <div className={styles.techBox}>
-            <h3>Wordpress</h3>
-            <p>Design værktøj til prototyping og samarbejde.</p>
+            <h3>CMS</h3>
+            <p>Erfaring med både Wordpress med Breakdance builder og headless CMS som DatoCMS til fleksibel og effektiv content management.</p>
+            <SkillLevel level="intermediate" />
           </div>
           <div className={styles.techBox}>
             <h3>Rest API</h3>
-            <p>Googles platform til mobil- og webapplikationsudvikling.</p>
+            <p>Design og implementering af RESTful API&apos;er med ressourcebaserede endpoints, der muliggør sikker dataudveksling mellem frontend og backend.</p>
+            <SkillLevel level="beginner" />
           </div>
           <div className={styles.techBox}>
             <h3>Python</h3>
-            <p>Utility-first CSS framework til hurtig UI-udvikling.</p>
+            <p>Alsidig programmeringssprog til dataanalyse, automation, backend-udvikling og machine learning med et enormt økosystem af biblioteker.</p>
+            <SkillLevel level="beginner" />
           </div>
           <div className={styles.techBox}>
-            <h3>Kubernetes </h3>
-            <p>Utility-first CSS framework til hurtig UI-udvikling.</p>
+            <h3>Kubernetes</h3>
+            <p>Container-orkestreringsplatform til automatiseret deployment, skalering og administration af containeriserede applikationer i cloud miljøer.</p>
+            <SkillLevel level="beginner" />
           </div>
           <div className={styles.techBox}>
-            <h3>Flask</h3>
-            <p>Utility-first CSS framework til hurtig UI-udvikling.</p>
+            <h3>AI</h3>
+            <p>Jeg har et bredt kendskab til forskellige AI modeller, både i forhold til kodning, UI/UX design og grafisk design. OpenAI, Google Gemini, Github CoPilot & Anthropic Claude er dem jeg oftest bruger.</p>
+            <SkillLevel level="intermediate" />
           </div>
         </div>
       </section>
@@ -269,7 +306,9 @@ export default function Home() {
         <div className={styles.endingWrapper}>
           <div className={styles.endingDarkWrapper}>
             <p className={styles.endingText}>
-              Du er meget velkommen til at kontakte mig, hvis du har spørgsmål, ønsker et samarbejde, eller bare vil sige hej! Brug knapperne nedenfor for at ringe, sende en mail, eller besøge min GitHub eller LinkedIn.
+              Jeg er i øjeblikket på udkig efter nye udfordringer, hvor jeg kan anvende og udvide mine kompetencer inden for frontend, app-udvikling og backend. Har du en spændende stilling, et projekt eller en idé, hvor mine færdigheder kunne gøre en forskel? Jeg er åben for både fastansættelse, freelance og samarbejdsmuligheder.
+              <br/><br/>
+              Tag endelig kontakt — jeg ser frem til at høre om, hvordan vi kan skabe værdi sammen. Du kan nå mig via telefon, mail, eller forbinde med mig på LinkedIn og GitHub.
             </p>
             <div className={styles.footerLink}>
               <a

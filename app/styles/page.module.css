@@ -601,10 +601,6 @@
   .endingFooter {
     padding: 2rem 0 1rem 0;
   }
-  .techSkillLevel {
-    font-size: 0.95rem;
-    padding: 0.2rem 0.8rem;
-  }
 }
 
 /* Responsive adjustments for screens 600px and smaller */
@@ -698,4 +694,85 @@
 
 .clickable:hover:after {
   opacity: 1;
+}
+
+/* Add this to your CSS file for the link styling */
+.certificateLink {
+  color: #c8efff;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.certificateLink:hover {
+  color: #f534f5; /* The pink color on hover */
+}
+
+.certificateLink::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: #f534f5;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: bottom right;
+}
+
+.certificateLink:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Improved Skill level indicators */
+.skillLevelContainer {
+  display: flex;
+  gap: 8px; /* Slightly larger gap for better visual separation */
+  margin-top: 15px;
+  width: 100%;
+  padding: 0 4px;
+  margin-bottom: 12px;
+}
+
+.skillLevel {
+  height: 10px; /* Taller for better visibility */
+  border-radius: 4px;
+  flex: 1;
+  min-width: 30px; /* Wider minimum width */
+  position: relative; /* For potential label positioning */
+}
+
+.skillBeginner {
+  background-color: rgba(200, 239, 255, 0.9); /* Light blue - more visible */
+  border: 1px solid rgba(200, 239, 255, 0.3);
+}
+
+.skillIntermediate {
+  background-color: rgba(48, 127, 181, 1); /* Medium blue - fully opaque */
+  border: 1px solid rgba(48, 127, 181, 0.3);
+}
+
+.skillAdvanced {
+  background-color: #f534f5; /* Pink */
+  border: 1px solid rgba(245, 52, 245, 0.3);
+}
+
+.skillActive {
+  opacity: 1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Add shadow to active indicators */
+
+}
+
+.skillInactive {
+  opacity: 0.15; /* Much lower opacity for inactive indicators */
+  filter: grayscale(70%); /* Apply grayscale filter to inactive indicators */
+  height: 8px; /* Make inactive indicators smaller */
+  margin-top: 1px; /* Center align with the active indicators */
+}
+
+.skillActive {
+  animation: pulseActive 2s infinite ease-in-out;
 }
