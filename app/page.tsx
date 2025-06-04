@@ -229,9 +229,9 @@ export default function Home() {
                 Hvis du ønsker at se mere omkring kurset kan du se det <a href="https://www.coursera.org/professional-certificates/ibm-backend-development" target="_blank" rel="noopener noreferrer" className={styles.certificateLink}>her</a>.
               </p>
               <div className={styles.progressContainer}>
-                <div className={styles.progressLabel}>50% Gennemført</div>
+                <div className={styles.progressLabel}>64% Gennemført - 7 ud af 11 kurser</div>
                 <div className={styles.progressBar}>
-                  <div className={styles.progressFill} style={{width: '50%'}}></div>
+                  <div className={styles.progressFill} style={{width: '64%'}}></div>
                 </div>
               </div>
             </div>

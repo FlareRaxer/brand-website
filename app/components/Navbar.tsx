@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState, useRef } from 'react';
+import Image from 'next/image';
 import './navbar.css';
 
 const Navbar = () => {
@@ -85,12 +86,13 @@ const Navbar = () => {
       <div className="navbar-progress-bar" style={{ width: `${scrollProgress}%` }} />
       <nav className={`navbar${showNavbar ? '' : ' navbar--hidden'}`}>
         <div className="navbar-brand">
-          <img
+          <Image
             src="/images/NewLogo.png"
             alt="Logo"
             className="navbar-logo"
             width={48}
             height={48}
+            priority
             draggable={false}
           />
         </div>
@@ -110,19 +112,20 @@ const Navbar = () => {
             Projekter
           </li>
           <li
-            className={activeSection === 'proLang' ? 'active' : ''}
-            onClick={() => scrollToSection('proLang')}
-            data-text="Technologies"
-          >
-            Teknologier
-          </li>
-          <li
             className={activeSection === 'myCertificates' ? 'active' : ''}
             onClick={() => scrollToSection('myCertificates')}
             data-text="Certificates"
           >
             Certificates
           </li>
+          <li
+            className={activeSection === 'proLang' ? 'active' : ''}
+            onClick={() => scrollToSection('proLang')}
+            data-text="Technologies"
+          >
+            Teknologier
+          </li>
+
           <li
             className={activeSection === 'endingFooter' ? 'active' : ''}
             onClick={() => scrollToSection('endingFooter')}
