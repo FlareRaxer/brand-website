@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
 import styles from './styles/page.module.css';
 import ProjectModal from './components/ProjectModal';
 
@@ -181,7 +182,11 @@ export default function Home() {
         <div className={styles.aboutMeWrapper}>
           <div className={styles.aboutDarkWrapper}>
             <div className={styles.aboutMePic}>
-              <img src="/images/meFace.png" alt="Profilbillede" />
+              <Image 
+                src="/images/meFace.png" 
+                alt="Profilbillede" 
+                priority
+              />
             </div>
             <div className={styles.aboutMeText}>
               <h3>Jeg er Jonas Jensen</h3>
@@ -206,7 +211,10 @@ export default function Home() {
               onClick={() => openProjectModal(project)}
             >
               <div className={styles.projectPic}>
-                <img src={project.image} alt={project.altText} />
+                <Image 
+                  src={project.image} 
+                  alt={project.altText} 
+                />
               </div>
               <div className={styles.projectText}>
                 <h3>{project.title}</h3>
