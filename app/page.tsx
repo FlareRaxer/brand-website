@@ -232,14 +232,14 @@ export default function Home() {
             <div className={styles.certificateContent}>
               <h3>IBM Backend Professional Certificate</h3>
               <p>
-                Dette omfattende kursusforløb udvikler mine færdigheder inden for backend-udvikling gennem 11 specialiserede kurser. Jeg lærer at arbejde med professionelle værktøjer som Linux scripting, Git, Python, SQL, Django, Docker, Kubernetes & OpenShift. <br/><br/> 
-                Kurset dækker også mikroservices, serverless arkitektur, applikationssikkerhed og monitorering - alt det, der driver moderne web- og mobilapplikationer. Gennem praktiske projekter bygger jeg erfaring med at udvikle server-side systemer & API&apos;er, der forbinder frontends med databaser & eksterne tjenester. <br/><br/>
-                Hvis du ønsker at se mere omkring kurset kan du se det <a href="https://www.coursera.org/professional-certificates/ibm-backend-development" target="_blank" rel="noopener noreferrer" className={styles.certificateLink}>her</a>.
+                Dette professionelle certificeringsprogram har givet mig de nødvendige færdigheder og viden til backend-udvikling gennem praktisk erfaring med branchens mest anvendte teknologier. Jeg har arbejdet med Linux scripting, Git & GitHub, Python, SQL, Django, samt container-teknologier som Docker, Kubernetes og OpenShift. <br/><br/> 
+                Certificeringen dækker også mikroservices, serverless arkitektur, applikationssikkerhed og monitorering - alt sammen essentielle komponenter i moderne backend-systemer. Gennem omfattende hands-on labs og projekter har jeg opbygget praktisk erfaring med at udvikle server-side systemer og services, der driver nutidens web- og mobilapplikationer. <br/><br/>
+                Se mit officielle certifikat <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/EFQMK8QG37XP" target="_blank" rel="noopener noreferrer" className={styles.certificateLink}>her</a> eller læs mere om kurset <a href="https://www.coursera.org/professional-certificates/ibm-backend-development" target="_blank" rel="noopener noreferrer" className={styles.certificateLink}>her</a>.
               </p>
               <div className={styles.progressContainer}>
-                <div className={styles.progressLabel}>64% Gennemført - 7 ud af 11 kurser</div>
+                <div className={styles.progressLabel}>100% Gennemført</div>
                 <div className={styles.progressBar}>
-                  <div className={styles.progressFill} style={{width: '64%'}}></div>
+                  <div className={styles.progressFill} style={{width: '100%'}}></div>
                 </div>
               </div>
             </div>
@@ -314,9 +314,9 @@ export default function Home() {
         <div className={styles.endingWrapper}>
           <div className={styles.endingDarkWrapper}>
             <p className={styles.endingText}>
-              Jeg er i øjeblikket på udkig efter nye udfordringer, hvor jeg kan anvende og udvide mine kompetencer inden for frontend, app-udvikling og backend. Har du en spændende stilling, et projekt eller en idé, hvor mine færdigheder kunne gøre en forskel? Jeg er åben for både fastansættelse, freelance og samarbejdsmuligheder.
+              Leder du efter en dedikeret udvikler, der kan skabe brugervenlige digitale løsninger fra ide til implementering? Med min baggrund som multimediedesigner og specialisering inden for React, Vue, Flutter og backend-teknologier leverer jeg moderne, skalerbare applikationer der skaber værdi for både brugere og forretning.
               <br/><br/>
-              Tag endelig kontakt — jeg ser frem til at høre om, hvordan vi kan skabe værdi sammen. Du kan nå mig via telefon, mail, eller forbinde med mig på LinkedIn og GitHub.
+              Jeg behersker hele udviklingscyklen – fra design og prototyping til deployment og vedligeholdelse. Mine projekter viser, hvordan jeg kombinerer æstetik med funktionalitet for at løse konkrete forretningsudfordringer. Lad os tale om, hvordan jeg kan hjælpe dit team med at realisere jeres næste digitale vision.
             </p>
             <div className={styles.footerLink}>
               <a

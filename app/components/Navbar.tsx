@@ -114,9 +114,9 @@ const Navbar = () => {
           <li
             className={activeSection === 'myCertificates' ? 'active' : ''}
             onClick={() => scrollToSection('myCertificates')}
-            data-text="Certificates"
+            data-text="Certifikater"
           >
-            Certificates
+            Certifikater
           </li>
           <li
             className={activeSection === 'proLang' ? 'active' : ''}
