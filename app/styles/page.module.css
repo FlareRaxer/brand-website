@@ -440,7 +440,7 @@
   font-size: 1.25rem;
   text-decoration: none;
   text-align: center;
-  border: 1px solid rgba(200, 239, 255, 0.1);
+  border: 1px solid rgba(200,239,255,0.1);
   min-width: 150px; /* Set fixed width for all buttons */
   width: 200px; /* Fixed width to make them all the same size */
   font-weight: 600;
@@ -777,4 +777,32 @@
 
 .skillActive {
   animation: pulseActive 2s infinite ease-in-out;
+}
+
+.certificateList {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 1.5rem 0;
+}
+
+.certificateList li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.5;
+  color: #c8efff;
+}
+
+.certificateList li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #f534f5; /* Pink accent color */
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.certificateList li strong {
+  color: #ffffff;
+  font-weight: 600;
 }

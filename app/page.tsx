@@ -63,7 +63,7 @@ export default function Home() {
     {
       id: 1,
       title: "Praktikopgave",
-      description: "Under min praktik lavede jeg en afsluttende opgave, hvor den eksisterende app skulle automatiseres mest muligt. App'en er lavet i Flutter og Firebase, og deployed til web og Android",
+      description: "Komplet Flutter-applikation med Firebase backend, der automatiserer skolernes administrative processer. Inkluderer dashboard med live data, mentor-system og brugeradministration.",
       image: "/images/efterskoleLogin.png",
       altText: "Praktikopgave",
       content: [
@@ -94,7 +94,7 @@ export default function Home() {
     {
       id: 2,
       title: "Eksamensopgave",
-      description: "Min eksamensopgave på multimediedesigneruddannelsen fokuserede på at opdatere fra Nuxt 2 til Nuxt 3 på en allerede eksisterende hjemmeside. Et redesign af den eksisterende hjemmeside blev også udført.",
+      description: "Framework-opdatering fra Nuxt 2 til Nuxt 3 på live hjemmeside kombineret med komplet redesign. Udfordrede både tekniske færdigheder og UX-design principper.",
       image: "/images/metteMunk.png",
       altText: "Eksamensopgave",
       content: [
@@ -125,7 +125,7 @@ export default function Home() {
     {
       id: 3,
       title: "Portfolio Website",
-      description: "Dette portfolio website er bygget med Next.js og React for at skabe en moderne og responsiv præsentation.",
+      description: "Havsinspireret Next.js portfolio med custom animations, dynamisk navigation og scroll-progress. Demonstrerer moderne React-udvikling og kreativ CSS-styling.",
       image: "/images/scharling.png",
       altText: "Portfolio Website",
       content: [
@@ -232,10 +232,25 @@ export default function Home() {
             <div className={styles.certificateContent}>
               <h3>IBM Backend Professional Certificate</h3>
               <p>
-                Dette professionelle certificeringsprogram har givet mig de nødvendige færdigheder og viden til backend-udvikling gennem praktisk erfaring med branchens mest anvendte teknologier. Jeg har arbejdet med Linux scripting, Git & GitHub, Python, SQL, Django, samt container-teknologier som Docker, Kubernetes og OpenShift. <br/><br/> 
+                Dette professionelle certificeringsprogram har givet mig de nødvendige færdigheder og viden til backend-udvikling gennem praktisk erfaring med branchens mest anvendte teknologier. <br/><br/>
+                
+                De vigtigste kompetencer jeg har opbygget inkluderer:
+              </p>
+              
+              <ul className={styles.certificateList}>
+                <li>Praktisk erfaring med <strong>Python og Django</strong> til backend-udvikling og API-design</li>
+                <li>Containerisering og orkestrering med <strong>Docker, Kubernetes og OpenShift</strong></li>
+                <li>Database-administration og optimering med <strong>SQL og NoSQL</strong> systemer</li>
+                <li>Implementation af <strong>mikroservices arkitektur</strong> og serverless computing</li>
+                <li>Applikationssikkerhed, monitorering og <strong>DevOps best practices</strong></li>
+                <li>Versionsstyring og samarbejde gennem <strong>Git, GitHub og Linux scripting</strong></li>
+              </ul>
+              
+              <p>
                 Certificeringen dækker også mikroservices, serverless arkitektur, applikationssikkerhed og monitorering - alt sammen essentielle komponenter i moderne backend-systemer. Gennem omfattende hands-on labs og projekter har jeg opbygget praktisk erfaring med at udvikle server-side systemer og services, der driver nutidens web- og mobilapplikationer. <br/><br/>
                 Se mit officielle certifikat <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/EFQMK8QG37XP" target="_blank" rel="noopener noreferrer" className={styles.certificateLink}>her</a> eller læs mere om kurset <a href="https://www.coursera.org/professional-certificates/ibm-backend-development" target="_blank" rel="noopener noreferrer" className={styles.certificateLink}>her</a>.
               </p>
+              
               <div className={styles.progressContainer}>
                 <div className={styles.progressLabel}>100% Gennemført</div>
                 <div className={styles.progressBar}>
