@@ -268,9 +268,9 @@ export default function Home() {
                 Hvis du ønsker at se mere omkring kurset kan du se det <a href="https://www.coursera.org/professional-certificates/google-cybersecurity" target="_blank" rel="noopener noreferrer" className={styles.certificateLink}>her</a>.
               </p>
               <div className={styles.progressContainer}>
-                <div className={styles.progressLabel}>Lige begyndt</div>
+                <div className={styles.progressLabel}>2 ud af 8 moduler</div>
                 <div className={styles.progressBar}>
-                  <div className={styles.progressFill} style={{width: '0%'}}></div>
+                  <div className={styles.progressFill} style={{width: '25%'}}></div>
                 </div>
               </div>
             </div>
