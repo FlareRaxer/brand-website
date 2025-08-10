@@ -335,24 +335,6 @@ export default function Home() {
             </p>
             <div className={styles.footerLink}>
               <a
-                href="tel:+4528340712"
-                className={styles.footerIconLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Mobil"
-              >
-                Mobil
-              </a>
-              <a
-                href="mailto:jonaskruse123@gmail.com"
-                className={styles.footerIconLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Email"
-              >
-                Email
-              </a>
-              <a
                 href="https://github.com/FlareRaxer"
                 className={styles.footerIconLink}
                 target="_blank"
