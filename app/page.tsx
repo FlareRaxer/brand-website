@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
+import { useTranslation } from 'react-i18next';
 import styles from './styles/page.module.css';
 import ProjectModal from './components/ProjectModal';
 
@@ -44,6 +45,7 @@ export default function Home() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const fullText = 'Sccharling';
   const typingSpeed = 100;
+  const { t } = useTranslation();
 
   useEffect(() => {
     let index = 0;
@@ -62,10 +64,10 @@ export default function Home() {
   const projectsData: Project[] = [
     {
       id: 1,
-      title: "Praktikopgave",
-      description: "Komplet Flutter-applikation med Firebase backend, der automatiserer skolernes administrative processer. Inkluderer dashboard med live data, mentor-system og brugeradministration.",
+      title: t('projects.internship.title'),
+      description: t('projects.internship.description'),
       image: "/images/efterskoleLogin.png",
-      altText: "Praktikopgave",
+      altText: t('projects.internship.title'),
       content: [
         {
           type: "text" as const,
@@ -93,10 +95,10 @@ export default function Home() {
     },
     {
       id: 2,
-      title: "Eksamensopgave",
-      description: "Framework-opdatering fra Nuxt 2 til Nuxt 3 på live hjemmeside kombineret med komplet redesign. Udfordrede både tekniske færdigheder og UX-design principper.",
+      title: t('projects.exam.title'),
+      description: t('projects.exam.description'),
       image: "/images/metteMunk.png",
-      altText: "Eksamensopgave",
+      altText: t('projects.exam.title'),
       content: [
         {
           type: "text" as const,
@@ -124,10 +126,10 @@ export default function Home() {
     },
     {
       id: 3,
-      title: "Portfolio Website",
-      description: "Havsinspireret Next.js portfolio med custom animations, dynamisk navigation og scroll-progress. Demonstrerer moderne React-udvikling og kreativ CSS-styling.",
+      title: t('projects.portfolio.title'),
+      description: t('projects.portfolio.description'),
       image: "/images/scharling.png",
-      altText: "Portfolio Website",
+      altText: t('projects.portfolio.title'),
       content: [
         {
           type: "text" as const,
@@ -173,36 +175,33 @@ export default function Home() {
             {typedText}
             {showCursor && <span className={styles.blinkingCursor}>_</span>}
           </h1>
-          <p className={styles.heroSubText}>Velkommen til min Portfolio</p>
+          <p className={styles.heroSubText}>{t('hero.subtitle')}</p>
         </div>
       </div>
 
       <section id="aboutMe" className={styles.aboutMe}>
-        <h2 className={styles.sectionTitle}>Hvem er jeg?</h2>
+        <h2 className={styles.sectionTitle}>{t('about.title')}</h2>
         <div className={styles.aboutMeWrapper}>
           <div className={styles.aboutDarkWrapper}>
             <div className={styles.aboutMePic}>
               <Image 
                 src="/images/meFace.png" 
                 alt="Profilbillede" 
+                width={600}
+                height={450}
                 priority
               />
             </div>
             <div className={styles.aboutMeText}>
-              <h3>Jeg er Jonas Jensen</h3>
-              <p>Som uddannet multimediedesigner fra UCL Odense kombinerer jeg kreativ tænkning med teknisk præcision i alt mit arbejde. Min passion ligger i at udvikle intuitive brugergrænseflader og skabe digitale oplevelser, der både imponerer visuelt og fungerer optimalt.
-                <br/><br/>
-                Jeg har specialiseret mig i frontend-udvikling med React og Vue.js samt cross-platform app-udvikling med Flutter. Min erfaring spænder fra design i Figma til implementering af Firebase-løsninger og komplekse API-integrationer. Jeg trives i krydsfeltet mellem design og kode, hvor jeg kan kombinere det æstetiske med det funktionelle.
-                <br/><br/>
-                For at udvide min tekniske værktøjskasse er jeg i gang med IBM Backend Professional Certificate og Google Cybersecurity Professional Certificate, hvilket giver mig en omfattende forståelse for hele den digitale værdikæde – fra brugerens første interaktion til databasens sikre forvaltning af data.
-              </p>
+              <h3>{t('about.name')}</h3>
+              <p>{t('about.description')}</p>
             </div>
           </div>
         </div>
       </section>
 
       <section id="aboutProjects" className={styles.aboutProjects}>
-        <h2 className={styles.sectionTitle}>Udvalgte projekter</h2>
+        <h2 className={styles.sectionTitle}>{t('projects.title')}</h2>
         <div className={styles.projectWrapper}>
           {projectsData.map((project) => (
             <div 
@@ -213,7 +212,9 @@ export default function Home() {
               <div className={styles.projectPic}>
                 <Image 
                   src={project.image} 
-                  alt={project.altText} 
+                  alt={project.altText}
+                  width={600}
+                  height={400}
                 />
               </div>
               <div className={styles.projectText}>
@@ -226,33 +227,31 @@ export default function Home() {
       </section>
 
       <section id="myCertificates" className={styles.myCertificates}>
-        <h2 className={styles.sectionTitle}>Certifikater</h2>
+        <h2 className={styles.sectionTitle}>{t('certificates.title')}</h2>
         <div className={styles.certificatesWrapper}>
           <div className={styles.certificateDarkWrapper}>
             <div className={styles.certificateContent}>
-              <h3>IBM Backend Professional Certificate</h3>
+              <h3>{t('certificates.ibm.title')}</h3>
               <p>
-                Dette professionelle certificeringsprogram har givet mig de nødvendige færdigheder og viden til backend-udvikling gennem praktisk erfaring med branchens mest anvendte teknologier. <br/><br/>
+                {t('certificates.ibm.description')} <br/><br/>
                 
-                De vigtigste kompetencer jeg har opbygget inkluderer:
+                {t('certificates.ibm.skills')}
               </p>
               
               <ul className={styles.certificateList}>
-                <li>Praktisk erfaring med <strong>Python og Django</strong> til backend-udvikling og API-design</li>
-                <li>Containerisering og orkestrering med <strong>Docker, Kubernetes og OpenShift</strong></li>
-                <li>Database-administration og optimering med <strong>SQL og NoSQL</strong> systemer</li>
-                <li>Implementation af <strong>mikroservices arkitektur</strong> og serverless computing</li>
-                <li>Applikationssikkerhed, monitorering og <strong>DevOps best practices</strong></li>
-                <li>Versionsstyring og samarbejde gennem <strong>Git, GitHub og Linux scripting</strong></li>
+                <li dangerouslySetInnerHTML={{ __html: t('certificates.ibm.skill1') }}></li>
+                <li dangerouslySetInnerHTML={{ __html: t('certificates.ibm.skill2') }}></li>
+                <li dangerouslySetInnerHTML={{ __html: t('certificates.ibm.skill3') }}></li>
+                <li dangerouslySetInnerHTML={{ __html: t('certificates.ibm.skill4') }}></li>
+                <li dangerouslySetInnerHTML={{ __html: t('certificates.ibm.skill5') }}></li>
+                <li dangerouslySetInnerHTML={{ __html: t('certificates.ibm.skill6') }}></li>
               </ul>
               
-              <p>
-                Certificeringen dækker også mikroservices, serverless arkitektur, applikationssikkerhed og monitorering - alt sammen essentielle komponenter i moderne backend-systemer. Gennem omfattende hands-on labs og projekter har jeg opbygget praktisk erfaring med at udvikle server-side systemer og services, der driver nutidens web- og mobilapplikationer. <br/><br/>
-                Se mit officielle certifikat <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/EFQMK8QG37XP" target="_blank" rel="noopener noreferrer" className={styles.certificateLink}>her</a> eller læs mere om kurset <a href="https://www.coursera.org/professional-certificates/ibm-backend-development" target="_blank" rel="noopener noreferrer" className={styles.certificateLink}>her</a>.
+              <p dangerouslySetInnerHTML={{ __html: t('certificates.ibm.details') + t('certificates.ibm.links') }}>
               </p>
               
               <div className={styles.progressContainer}>
-                <div className={styles.progressLabel}>100% Gennemført</div>
+                <div className={styles.progressLabel}>{t('certificates.ibm.progress')}</div>
                 <div className={styles.progressBar}>
                   <div className={styles.progressFill} style={{width: '100%'}}></div>
                 </div>
@@ -261,14 +260,14 @@ export default function Home() {
           </div>
           <div className={styles.certificateDarkWrapper}>
             <div className={styles.certificateContent}>
-              <h3>Google Cybersecurity Professional Certificate</h3>
+              <h3>{t('certificates.google.title')}</h3>
               <p>
-                Dette certificeringsprogram fra Google giver mig et godt overblik og en fundamental forståelse for cybersikkerhed gennem 8 specialiserede kurser. Jeg lærer essentielle færdigheder inden for netværkssikkerhed, kryptering, trusselsdetektion og sikkerhedsprotokoller. <br/><br/>
-                Kurset dækker praktiske værktøjer som Python, Linux, SQL og SIEM-systemer, der er afgørende i moderne sikkerhedsanalyse. Gennem praktiske øvelser arbejder jeg med virkelighedsnære scenarier, hvor jeg implementerer sikkerhedsforanstaltninger mod trusler som phishing, malware og uautoriseret adgang. <br/><br/>
-                Hvis du ønsker at se mere omkring kurset kan du se det <a href="https://www.coursera.org/professional-certificates/google-cybersecurity" target="_blank" rel="noopener noreferrer" className={styles.certificateLink}>her</a>.
+                {t('certificates.google.description')} <br/><br/>
+                {t('certificates.google.details')} <br/><br/>
+                <span dangerouslySetInnerHTML={{ __html: t('certificates.google.link') }}></span>
               </p>
               <div className={styles.progressContainer}>
-                <div className={styles.progressLabel}>2 ud af 8 moduler</div>
+                <div className={styles.progressLabel}>{t('certificates.google.progress')}</div>
                 <div className={styles.progressBar}>
                   <div className={styles.progressFill} style={{width: '25%'}}></div>
                 </div>
@@ -279,59 +278,57 @@ export default function Home() {
       </section>
 
       <section id="proLang" className={styles.proLang}>
-        <h2 className={styles.sectionTitle}>Teknologier & Værktøjer</h2>
+        <h2 className={styles.sectionTitle}>{t('technologies.title')}</h2>
         <div className={styles.proLangWrapper}>
           <div className={styles.techBox}>
-            <h3>Vue & React</h3>
-            <p>JavaScript-frameworks med komponent-baseret arkitektur og effektiv state management. Min eksamensopgave er lavet i Vue. Min portfolio er lavet i React</p>
+            <h3>{t('technologies.vueReact.title')}</h3>
+            <p>{t('technologies.vueReact.description')}</p>
             <SkillLevel level="advanced" />
           </div>
           <div className={styles.techBox}>
-            <h3>Flutter</h3>
-            <p>Google&apos;s UI-toolkit til at udvikle native apps til Android, iOS, web og desktop fra én fælles kodebase med Dart. Blandt andet min praktikopgave er lavet i Flutter.</p>
+            <h3>{t('technologies.flutter.title')}</h3>
+            <p>{t('technologies.flutter.description')}</p>
             <SkillLevel level="advanced" />
           </div>
           <div className={styles.techBox}>
-            <h3>Firebase</h3>
-            <p>En komplet backend-as-a-service platform fra Google med realtidsdatabase, authentication, hosting og cloud functions til hurtig app-udvikling.</p>
+            <h3>{t('technologies.firebase.title')}</h3>
+            <p>{t('technologies.firebase.description')}</p>
             <SkillLevel level="intermediate" />
           </div>
           <div className={styles.techBox}>
-            <h3>CMS</h3>
-            <p>Erfaring med både Wordpress med Breakdance builder og headless CMS som DatoCMS til fleksibel og effektiv content management.</p>
+            <h3>{t('technologies.cms.title')}</h3>
+            <p>{t('technologies.cms.description')}</p>
             <SkillLevel level="intermediate" />
           </div>
           <div className={styles.techBox}>
-            <h3>Rest API</h3>
-            <p>Design og implementering af RESTful API&apos;er med ressourcebaserede endpoints, der muliggør sikker dataudveksling mellem frontend og backend.</p>
+            <h3>{t('technologies.restApi.title')}</h3>
+            <p>{t('technologies.restApi.description')}</p>
             <SkillLevel level="beginner" />
           </div>
           <div className={styles.techBox}>
-            <h3>Python</h3>
-            <p>Alsidig programmeringssprog til dataanalyse, automation, backend-udvikling og machine learning med et enormt økosystem af biblioteker.</p>
+            <h3>{t('technologies.python.title')}</h3>
+            <p>{t('technologies.python.description')}</p>
             <SkillLevel level="beginner" />
           </div>
           <div className={styles.techBox}>
-            <h3>Kubernetes</h3>
-            <p>Container-orkestreringsplatform til automatiseret deployment, skalering og administration af containeriserede applikationer i cloud miljøer.</p>
+            <h3>{t('technologies.kubernetes.title')}</h3>
+            <p>{t('technologies.kubernetes.description')}</p>
             <SkillLevel level="beginner" />
           </div>
           <div className={styles.techBox}>
-            <h3>AI</h3>
-            <p>Jeg har et bredt kendskab til forskellige AI modeller, både i forhold til kodning, UI/UX design og grafisk design. OpenAI, Google Gemini, Github CoPilot & Anthropic Claude er dem jeg oftest bruger.</p>
+            <h3>{t('technologies.ai.title')}</h3>
+            <p>{t('technologies.ai.description')}</p>
             <SkillLevel level="intermediate" />
           </div>
         </div>
       </section>
 
       <section id="endingFooter" className={styles.endingFooter}>
-        <h2 className={styles.sectionTitle}>Kontakt mig</h2>
+        <h2 className={styles.sectionTitle}>{t('contact.title')}</h2>
         <div className={styles.endingWrapper}>
           <div className={styles.endingDarkWrapper}>
             <p className={styles.endingText}>
-              Leder du efter en dedikeret udvikler, der kan skabe brugervenlige digitale løsninger fra ide til implementering? Med min baggrund som multimediedesigner og specialisering inden for React, Vue, Flutter og backend-teknologier leverer jeg moderne, skalerbare applikationer der skaber værdi for både brugere og forretning.
-              <br/><br/>
-              Jeg behersker hele udviklingscyklen – fra design og prototyping til deployment og vedligeholdelse. Mine projekter viser, hvordan jeg kombinerer æstetik med funktionalitet for at løse konkrete forretningsudfordringer. Lad os tale om, hvordan jeg kan hjælpe dit team med at realisere jeres næste digitale vision.
+              {t('contact.description')}
             </p>
             <div className={styles.footerLink}>
               <a
@@ -341,7 +338,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 aria-label="GitHub"
               >
-                GitHub
+                {t('contact.github')}
               </a>
               <a
                 href="https://www.linkedin.com/in/jonas-jensen-82860663"
@@ -350,16 +347,16 @@ export default function Home() {
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
               >
-                LinkedIn
+                {t('contact.linkedin')}
               </a>
               <a
                 href="/cv.pdf"
                 className={styles.footerIconLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="LinkedIn"
+                aria-label="Download CV"
               >
-                Download CV
+                {t('contact.downloadCv')}
               </a>
             </div>
           </div>

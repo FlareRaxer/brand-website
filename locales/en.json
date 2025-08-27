@@ -1,0 +1,109 @@
+{
+  "hero": {
+    "title": "Sccharling",
+    "subtitle": "Welcome to my Portfolio"
+  },
+  "nav": {
+    "about": "Who am I?",
+    "projects": "Projects",
+    "certificates": "Certificates",
+    "technologies": "Technologies",
+    "contact": "Contact",
+    "language": "Language"
+  },
+  "about": {
+    "title": "Who am I?",
+    "name": "I am Jonas Jensen",
+    "description": "As a graduate multimedia designer from UCL Odense, I combine creative thinking with technical precision in all my work. My passion lies in developing intuitive user interfaces and creating digital experiences that both impress visually and function optimally.\n\nI have specialized in frontend development with React and Vue.js as well as cross-platform app development with Flutter. My experience ranges from design in Figma to implementing Firebase solutions and complex API integrations. I thrive in the intersection between design and code, where I can combine the aesthetic with the functional.\n\nTo expand my technical toolkit, I am currently pursuing IBM Backend Professional Certificate and Google Cybersecurity Professional Certificate, which gives me a comprehensive understanding of the entire digital value chain – from the user's first interaction to the database's secure management of data."
+  },
+  "projects": {
+    "title": "Selected Projects",
+    "internship": {
+      "title": "Internship Project",
+      "description": "Complete Flutter application with Firebase backend that automates schools' administrative processes. Includes dashboard with live data, mentor system and user administration.",
+      "content1": "During my internship at Lighthouse Digital, I developed a comprehensive web application using Flutter and Firebase. The project included developing a user-friendly interface, implementing authentication with Firebase Auth, real-time database integration and cloud storage functionality.",
+      "content2": "The project was about creating an Admin page based on an already existing app. Each school should be able to manage as much as possible themselves, and see relevant data in a simple and simple format that leans against the existing app.\n\nSince the existing app was written in Flutter 2.X, it was necessary to write the new app from scratch in Flutter 3.26+. Since all data and backend were on an already existing Firebase/Firestore, much could easily be imported and implemented.\n\nThe biggest challenge was to implement and create the graphs as seen in the image above. The database where the users are located had to be updated for the graphs to work as intended. Including expanding the user database with more categories.\n\nAfterwards, the Mentor page was created. On this page, each school can easily accept new mentor requests, see existing approved mentors and remove them again. Furthermore, you can see when each mentor was last logged in.",
+      "content3": "This internship assignment has been enormously exciting and challenging. First and foremost, it has given me a good understanding and a solid foundation around Flutter/Dart. It has also given me a good understanding of how Flutter uses dependencies. Furthermore, I have learned a lot about what and how Firebase and its possibilities can be used in interaction between apps and web.\n\nSince time was short, there were several things I didn't get to dive into, including CORE in Firebase.\n\nBased on a 3-month internship, where the first month went to learning Flutter. 1 month on self-chosen project and 1 month on internship assignment, I am quite satisfied with the result. And this project has given me a solid understanding and a good foundation to work more in Flutter/Dart"
+    },
+    "exam": {
+      "title": "Exam Project",
+      "description": "Framework update from Nuxt 2 to Nuxt 3 on live website combined with complete redesign. Challenged both technical skills and UX design principles.",
+      "content1": "My exam project at the multimedia design education focused on updating from Nuxt 2 to Nuxt 3 on an already existing website. A redesign of the existing website was also carried out.\n\nIt was fun and challenging to take a site that is live and update the framework. Particularly challenging, but incredibly educational",
+      "content2": "The project required research, wireframing, prototyping and testing to ensure an optimal user experience. It was also challenging that there was no existing data about users on the existing site. Therefore, we had to start from scratch, even though the website was live. This was a fun and different challenge.",
+      "content3": "The project received great praise for usability and technical implementation. In addition, the project gave me a good understanding of what Vue is and what possibilities Vue & Nuxt offer. Likewise, it gave a broad understanding of how complex sites are put together"
+    },
+    "portfolio": {
+      "title": "Portfolio Website",
+      "description": "Ocean-inspired Next.js portfolio with custom animations, dynamic navigation and scroll-progress. Demonstrates modern React development and creative CSS styling.",
+      "content1": "This portfolio website is inspired by the ocean. From when you hit the water, to diving deeper, where the light slowly disappears and a new world opens up. Built with Next.js and React to create a fast, responsive and modern presentation of my projects and competencies.",
+      "content2": "The site uses CSS Modules for styling, custom animations for interactivity, and is fully responsive across all devices. As a special challenge, I implemented a custom scroll progress bar and a dynamic navigation that highlights the current section.",
+      "content3": "The site is my first website in React, and has therefore also laid the foundation for my understanding of React and Next.js."
+    }
+  },
+  "certificates": {
+    "title": "Certificates",
+    "ibm": {
+      "title": "IBM Backend Professional Certificate",
+      "description": "This professional certification program has given me the necessary skills and knowledge for backend development through practical experience with the industry's most used technologies.",
+      "skills": "The most important skills I have built include:",
+      "skill1": "Practical experience with <strong>Python and Django</strong> for backend development and API design",
+      "skill2": "Containerization and orchestration with <strong>Docker, Kubernetes and OpenShift</strong>",
+      "skill3": "Database administration and optimization with <strong>SQL and NoSQL</strong> systems",
+      "skill4": "Implementation of <strong>microservices architecture</strong> and serverless computing",
+      "skill5": "Application security, monitoring and <strong>DevOps best practices</strong>",
+      "skill6": "Version control and collaboration through <strong>Git, GitHub and Linux scripting</strong>",
+      "details": "The certification also covers microservices, serverless architecture, application security and monitoring - all essential components of modern backend systems. Through extensive hands-on labs and projects, I have built practical experience in developing server-side systems and services that drive today's web and mobile applications.",
+      "links": "See my official certificate <a href=\"https://www.coursera.org/account/accomplishments/specialization/certificate/EFQMK8QG37XP\" target=\"_blank\" rel=\"noopener noreferrer\">here</a> or read more about the course <a href=\"https://www.coursera.org/professional-certificates/ibm-backend-development\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>.",
+      "progress": "100% Completed"
+    },
+    "google": {
+      "title": "Google Cybersecurity Professional Certificate",
+      "description": "This certification program from Google gives me a good overview and a fundamental understanding of cybersecurity through 8 specialized courses. I learn essential skills in network security, encryption, threat detection and security protocols.",
+      "details": "The course covers practical tools such as Python, Linux, SQL and SIEM systems, which are crucial in modern security analysis. Through practical exercises, I work with real-world scenarios where I implement security measures against threats such as phishing, malware and unauthorized access.",
+      "link": "If you want to see more about the course, you can see it <a href=\"https://www.coursera.org/professional-certificates/google-cybersecurity\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>.",
+      "progress": "2 out of 8 modules"
+    }
+  },
+  "technologies": {
+    "title": "Technologies & Tools",
+    "vueReact": {
+      "title": "Vue & React",
+      "description": "JavaScript frameworks with component-based architecture and efficient state management. My exam project is made in Vue. My portfolio is made in React"
+    },
+    "flutter": {
+      "title": "Flutter",
+      "description": "Google's UI toolkit for developing native apps for Android, iOS, web and desktop from a single codebase with Dart. Among other things, my internship project is made in Flutter."
+    },
+    "firebase": {
+      "title": "Firebase",
+      "description": "A complete backend-as-a-service platform from Google with real-time database, authentication, hosting and cloud functions for rapid app development."
+    },
+    "cms": {
+      "title": "CMS",
+      "description": "Experience with both WordPress with Breakdance builder and headless CMS like DatoCMS for flexible and efficient content management."
+    },
+    "restApi": {
+      "title": "REST API",
+      "description": "Design and implementation of RESTful APIs with resource-based endpoints that enable secure data exchange between frontend and backend."
+    },
+    "python": {
+      "title": "Python",
+      "description": "Versatile programming language for data analysis, automation, backend development and machine learning with an enormous ecosystem of libraries."
+    },
+    "kubernetes": {
+      "title": "Kubernetes",
+      "description": "Container orchestration platform for automated deployment, scaling and management of containerized applications in cloud environments."
+    },
+    "ai": {
+      "title": "AI",
+      "description": "I have a broad knowledge of different AI models, both in terms of coding, UI/UX design and graphic design. OpenAI, Google Gemini, GitHub CoPilot & Anthropic Claude are the ones I use most often."
+    }
+  },
+  "contact": {
+    "title": "Contact me",
+    "description": "Are you looking for a dedicated developer who can create user-friendly digital solutions from idea to implementation? With my background as a multimedia designer and specialization in React, Vue, Flutter and backend technologies, I deliver modern, scalable applications that create value for both users and business.\n\nI master the entire development cycle – from design and prototyping to deployment and maintenance. My projects show how I combine aesthetics with functionality to solve concrete business challenges. Let's talk about how I can help your team realize your next digital vision.",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "downloadCv": "Download CV"
+  }
+}

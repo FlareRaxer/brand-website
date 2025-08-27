@@ -277,22 +277,21 @@
 }
 
 .aboutMePic {
-  width: 80%;
+  flex-basis: 45%;
   max-width: 600px;
-  margin: auto;
+  flex-shrink: 0;
+  margin: 0;
   border-radius: 12px;
-  text-align: center;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .aboutMePic img {
-  /* border-radius: 50%; or 20px for a soft corner rounding */
   width: 100%;
-  max-width: 600px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  filter: brightness(1.1) contrast(1.1);
+  height: auto; /* Let height adjust automatically to maintain aspect ratio */
+  object-fit: cover;
   border-radius: 12px;
 }
 
@@ -363,18 +362,21 @@
 }
 
 .projectPic {
-  width: 80%; 
+  flex-basis: 45%;
   max-width: 600px;
-  margin: 0; 
+  flex-shrink: 0;
+  margin: 0;
   border-radius: 12px;
+  overflow: hidden;
   display: flex;
-  align-items: flex-start; 
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
 }
 
 .projectPic img {
   width: 100%;
-  height: auto;
+  height: auto; /* Let height adjust automatically to maintain aspect ratio */
+  object-fit: cover;
   border-radius: 8px; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   filter: brightness(1.1) contrast(1.1);
@@ -487,7 +489,7 @@
 .aboutDarkWrapper,
 .projectDarkWrapper {
   flex-direction: row;
-  align-items: flex-start;
+  align-items: stretch; /* Changed from flex-start to stretch */
 }
 
 /* Adjust projectDarkWrapper to match other wrappers */
@@ -523,7 +525,7 @@
   .aboutMePic,
   .projectPic {
     width: 100%; /* Full width for images */
-    max-width: 400px; /* Limit max width */
+    max-width: 500px; /* Limit max width */
     margin-bottom: 1rem; /* Add spacing below image */
   }
 

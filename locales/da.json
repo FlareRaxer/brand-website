@@ -1,0 +1,109 @@
+{
+  "hero": {
+    "title": "Sccharling",
+    "subtitle": "Velkommen til min Portfolio"
+  },
+  "nav": {
+    "about": "Hvem er jeg?",
+    "projects": "Projekter",
+    "certificates": "Certifikater",
+    "technologies": "Teknologier",
+    "contact": "Kontakt",
+    "language": "Sprog"
+  },
+  "about": {
+    "title": "Hvem er jeg?",
+    "name": "Jeg er Jonas Jensen",
+    "description": "Som uddannet multimededesigner fra UCL Odense kombinerer jeg kreativ tænkning med teknisk præcision i alt mit arbejde. Min passion ligger i at udvikle intuitive brugergrænseflader og skabe digitale oplevelser, der både imponerer visuelt og fungerer optimalt.\n\nJeg har specialiseret mig i frontend-udvikling med React og Vue.js samt cross-platform app-udvikling med Flutter. Min erfaring spænder fra design i Figma til implementering af Firebase-løsninger og komplekse API-integrationer. Jeg trives i krydsfeltet mellem design og kode, hvor jeg kan kombinere det æstetiske med det funktionelle.\n\nFor at udvide min tekniske værktøjskasse er jeg i gang med IBM Backend Professional Certificate og Google Cybersecurity Professional Certificate, hvilket giver mig en omfattende forståelse for hele den digitale værdikæde – fra brugerens første interaktion til databasens sikre forvaltning af data."
+  },
+  "projects": {
+    "title": "Udvalgte projekter",
+    "internship": {
+      "title": "Praktikopgave",
+      "description": "Komplet Flutter-applikation med Firebase backend, der automatiserer skolernes administrative processer. Inkluderer dashboard med live data, mentor-system og brugeradministration.",
+      "content1": "Under min praktik hos Ligthouse Digital udviklede jeg en omfattende webapplikation ved hjælp af Flutter og Firebase. Projektet omfattede udvikling af en brugervenlig grænseflade, implementering af autentifikation med Firebase Auth, realtidsdatabase integration og cloud storage funktionalitet.",
+      "content2": "Projektet gik ud på at lave en Admin side baseret på en allerede eksisterende app. Hver skole skulle kunne administrere mest muligt selv, og se relevant data i et enkelt og simpelt format, der læner sig op af den eksisterende app.\n\nDa den eksisterende app var skrevet i Flutter 2.X var det nødvendigt at skrive den nye app fra bunden i Flutter 3.26+. Da al data og backend lå på en allerede eksisterende Firbase/Firestore, så kunne meget nemt importeres og implementeres.\n\nDen største udfordring var at implementere og lave graferne som ses på billedet ovenover. Databasen hvor brugerne ligger skulle opdateres for at graferne ville virke efter hensigten. Herunder udvide brugardatabasen med flere kategorier.\n\nHerefter blev Mentor siden lavet. På denne side kan den enkelte skole nemt acceptere nye mentoranmodninger, se eksisterende godkendte mentorer og fjerne dem igen. Endvidere kan man se hvornår hver mentor sidst har været logget på.",
+      "content3": "Denne praktikopgave har været enorm spændende og udfordrende. Først og fremmest har det givet mig en god forståelse og en solid base omkring Flutter/Dart. Det har opgså givet mig en god forståelse for, hvordan Flutter bruger dependencies. Ydermere har jeg lært meget om, hvad og hvordan Firebase og dets muligheder kan bruges i samspil mellem apps og web.\n\nDa tiden var knap var der flere ting jeg ikke nåede at kaste mig ud i, blandt andet CORE i Firebase.\n\nBaseret på en 3 måneders praktik, hvor den første måned gik med at lære Flutter. 1 måned på selvvalgt projekt og 1 måned på praktikopgaven, så er jeg ganske tilfreds med resultatet. Og dette projekt har givet mig en solid forståelse og et godt fundamnet til at arbejde mere i Flutter/Dart"
+    },
+    "exam": {
+      "title": "Eksamensopgave",
+      "description": "Framework-opdatering fra Nuxt 2 til Nuxt 3 på live hjemmeside kombineret med komplet redesign. Udfordrede både tekniske færdigheder og UX-design principper.",
+      "content1": "Min eksamensopgave på multimediedesigneruddannelsen fokuserede på at opdatere fra Nuxt 2 til Nuxt 3 på en allerede eksisterende hjemmeside. Et redesign af den eksisterende hjemmeside blev også udført.\n\nDet var sjovt og udfordrende at tage en side som er live,og opdatere frameworken. Særdeles udfordrende, men utrolig lærerigt",
+      "content2": "Projektet krævede research, wireframing, prototyping og testing for at sikre en optimal brugeroplevelse. Det var også udfordrende at der på den eksisterende side ikke eksisterede noget data omkring brugerne. Derfor skulle vi starte fra bunden, selvom hjemmesiden var live. Dette var en sjov og anderledes udfordring.",
+      "content3": "Projektet fik stor ros for brugervenlighed og teknisk implementering. Derudover gav projektet mig en god forståelse for hvad Vue er og hvilke muligheder Vue & Nuxt giver. Ligeledes gav det en bred forståelse for, hvrodan komplekse sider er sat sammen"
+    },
+    "portfolio": {
+      "title": "Portfolio Website",
+      "description": "Havsinspireret Next.js portfolio med custom animations, dynamisk navigation og scroll-progress. Demonstrerer moderne React-udvikling og kreativ CSS-styling.",
+      "content1": "Dette portfolio website er inspireret af havet. Fra du rammer vandet, til du dykker længere ned, hvor lyset langsomt forsvinder og en ny verden åbner sig. Bygget med Next.js og React for at skabe en hurtig, responsiv og moderne præsentation af mine projekter og kompetencer.",
+      "content2": "Siden anvender CSS Modules for styling, custom animations for interaktivitet, og er fuldt responsive på tværs af alle enheder. Som en særlig udfordring implementerede jeg en custom scroll progress bar og en dynamisk navigation der fremhæver den aktuelle sektion.",
+      "content3": "Siden er min første hjemmeside i React, og har derfor også lagt grundlaget for min forståelse af React og Next.js."
+    }
+  },
+  "certificates": {
+    "title": "Certifikater",
+    "ibm": {
+      "title": "IBM Backend Professional Certificate",
+      "description": "Dette professionelle certificeringsprogram har givet mig de nødvendige færdigheder og viden til backend-udvikling gennem praktisk erfaring med branchens mest anvendte teknologier.",
+      "skills": "De vigtigste kompetencer jeg har opbygget inkluderer:",
+      "skill1": "Praktisk erfaring med <strong>Python og Django</strong> til backend-udvikling og API-design",
+      "skill2": "Containerisering og orkestrering med <strong>Docker, Kubernetes og OpenShift</strong>",
+      "skill3": "Database-administration og optimering med <strong>SQL og NoSQL</strong> systemer",
+      "skill4": "Implementation af <strong>mikroservices arkitektur</strong> og serverless computing",
+      "skill5": "Applikationssikkerhed, monitorering og <strong>DevOps best practices</strong>",
+      "skill6": "Versionsstyring og samarbejde gennem <strong>Git, GitHub og Linux scripting</strong>",
+      "details": "Certificeringen dækker også mikroservices, serverless arkitektur, applikationssikkerhed og monitorering - alt sammen essentielle komponenter i moderne backend-systemer. Gennem omfattende hands-on labs og projekter har jeg opbygget praktisk erfaring med at udvikle server-side systemer og services, der driver nutidens web- og mobilapplikationer.",
+      "links": "Se mit officielle certifikat <a href=\"https://www.coursera.org/account/accomplishments/specialization/certificate/EFQMK8QG37XP\" target=\"_blank\" rel=\"noopener noreferrer\">her</a> eller læs mere om kurset <a href=\"https://www.coursera.org/professional-certificates/ibm-backend-development\" target=\"_blank\" rel=\"noopener noreferrer\">her</a>.",
+      "progress": "100% Gennemført"
+    },
+    "google": {
+      "title": "Google Cybersecurity Professional Certificate",
+      "description": "Dette certificeringsprogram fra Google giver mig et godt overblik og en fundamental forståelse for cybersikkerhed gennem 8 specialiserede kurser. Jeg lærer essentielle færdigheder inden for netværkssikkerhed, kryptering, trusselsdetektion og sikkerhedsprotokoller.",
+      "details": "Kurset dækker praktiske værktøjer som Python, Linux, SQL og SIEM-systemer, der er afgørende i moderne sikkerhedsanalyse. Gennem praktiske øvelser arbejder jeg med virkelighedsnære scenarier, hvor jeg implementerer sikkerhedsforanstaltninger mod trusler som phishing, malware og uautoriseret adgang.",
+      "link": "Hvis du ønsker at se mere omkring kurset kan du se det <a href=\"https://www.coursera.org/professional-certificates/google-cybersecurity\" target=\"_blank\" rel=\"noopener noreferrer\">her</a>.",
+      "progress": "2 ud af 8 moduler"
+    }
+  },
+  "technologies": {
+    "title": "Teknologier & Værktøjer",
+    "vueReact": {
+      "title": "Vue & React",
+      "description": "JavaScript-frameworks med komponent-baseret arkitektur og effektiv state management. Min eksamensopgave er lavet i Vue. Min portfolio er lavet i React"
+    },
+    "flutter": {
+      "title": "Flutter",
+      "description": "Google's UI-toolkit til at udvikle native apps til Android, iOS, web og desktop fra én fælles kodebase med Dart. Blandt andet min praktikopgave er lavet i Flutter."
+    },
+    "firebase": {
+      "title": "Firebase",
+      "description": "En komplet backend-as-a-service platform fra Google med realtidsdatabase, authentication, hosting og cloud functions til hurtig app-udvikling."
+    },
+    "cms": {
+      "title": "CMS",
+      "description": "Erfaring med både Wordpress med Breakdance builder og headless CMS som DatoCMS til fleksibel og effektiv content management."
+    },
+    "restApi": {
+      "title": "Rest API",
+      "description": "Design og implementering af RESTful API'er med ressourcebaserede endpoints, der muliggør sikker dataudveksling mellem frontend og backend."
+    },
+    "python": {
+      "title": "Python",
+      "description": "Alsidig programmeringssprog til dataanalyse, automation, backend-udvikling og machine learning med et enormt økosystem af biblioteker."
+    },
+    "kubernetes": {
+      "title": "Kubernetes",
+      "description": "Container-orkestreringsplatform til automatiseret deployment, skalering og administration af containeriserede applikationer i cloud miljøer."
+    },
+    "ai": {
+      "title": "AI",
+      "description": "Jeg har et bredt kendskab til forskellige AI modeller, både i forhold til kodning, UI/UX design og grafisk design. OpenAI, Google Gemini, Github CoPilot & Anthropic Claude er dem jeg oftest bruger."
+    }
+  },
+  "contact": {
+    "title": "Kontakt mig",
+    "description": "Leder du efter en dedikeret udvikler, der kan skabe brugervenlige digitale løsninger fra ide til implementering? Med min baggrund som multimediedesigner og specialisering inden for React, Vue, Flutter og backend-teknologier leverer jeg moderne, skalerbare applikationer der skaber værdi for både brugere og forretning.\n\nJeg behersker hele udviklingscyklen – fra design og prototyping til deployment og vedligeholdelse. Mine projekter viser, hvordan jeg kombinerer æstetik med funktionalitet for at løse konkrete forretningsudfordringer. Lad os tale om, hvordan jeg kan hjælpe dit team med at realisere jeres næste digitale vision.",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "downloadCv": "Download CV"
+  }
+}

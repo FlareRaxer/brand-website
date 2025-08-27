@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
+import { useTranslation } from 'react-i18next';
 import './navbar.css';
 
 const Navbar = () => {
@@ -10,6 +11,7 @@ const Navbar = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [showNavbar, setShowNavbar] = useState(true);
   const lastScrollY = useRef(0);
+  const { t, i18n } = useTranslation();
 
   // Section highlight logic
   useEffect(() => {
@@ -69,6 +71,11 @@ const Navbar = () => {
     }
   };
 
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+    setMenuOpen(false); // Close menu on mobile after language change
+  };
+
   // Close menu on window resize if above 1300px
   useEffect(() => {
     const handleResize = () => {
@@ -100,38 +107,57 @@ const Navbar = () => {
           <li
             className={activeSection === 'aboutMe' ? 'active' : ''}
             onClick={() => scrollToSection('aboutMe')}
-            data-text="About Me"
+            data-text={t('nav.about')}
           >
-            Hvem er jeg?
+            {t('nav.about')}
           </li>
           <li
             className={activeSection === 'aboutProjects' ? 'active' : ''}
             onClick={() => scrollToSection('aboutProjects')}
-            data-text="Projects"
+            data-text={t('nav.projects')}
           >
-            Projekter
+            {t('nav.projects')}
           </li>
           <li
             className={activeSection === 'myCertificates' ? 'active' : ''}
             onClick={() => scrollToSection('myCertificates')}
-            data-text="Certifikater"
+            data-text={t('nav.certificates')}
           >
-            Certifikater
+            {t('nav.certificates')}
           </li>
           <li
             className={activeSection === 'proLang' ? 'active' : ''}
             onClick={() => scrollToSection('proLang')}
-            data-text="Technologies"
+            data-text={t('nav.technologies')}
           >
-            Teknologier
+            {t('nav.technologies')}
           </li>
 
           <li
             className={activeSection === 'endingFooter' ? 'active' : ''}
             onClick={() => scrollToSection('endingFooter')}
-            data-text="Contact"
+            data-text={t('nav.contact')}
           >
-            Kontakt
+            {t('nav.contact')}
+          </li>
+
+          {/* Language Switcher */}
+          <li className="navbar-language">
+            <button
+              className={`language-btn ${i18n.language === 'da' ? 'active' : ''}`}
+              onClick={() => changeLanguage('da')}
+              aria-label="Switch to Danish"
+            >
+              DA
+            </button>
+            <span className="language-separator">|</span>
+            <button
+              className={`language-btn ${i18n.language === 'en' ? 'active' : ''}`}
+              onClick={() => changeLanguage('en')}
+              aria-label="Switch to English"
+            >
+              EN
+            </button>
           </li>
         </ul>
         <button
