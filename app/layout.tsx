@@ -53,8 +53,8 @@ export default function RootLayout({
         />
         {/* End Google Analytics Scripts */}
 
-        <Navbar />
         <LanguageProvider>
+          <Navbar />
           {children}
         </LanguageProvider>
       </body>

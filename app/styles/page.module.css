@@ -311,15 +311,18 @@
 }
 
 .aboutMeText h3 {
-  color: #c8efff;
   font-size: 1.8rem;
-  margin-bottom: 1rem;
-  font-weight: 500; /* Setting font weight to 500 */
+  font-weight: 600;
+  color: #c8efff;
+  margin-bottom: 0.5rem;
 }
 
 .aboutMeText p {
-  color: white;
-  text-align: left;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #f5f5f5;
+  max-width: 800px;
+  white-space: pre-line;
 }
 
 .aboutProjects {
@@ -334,22 +337,28 @@
 }
 
 .projectWrapper {
-  background-color: rgba(0, 40, 80, 0.7);
-  display: flex;
-  flex-direction: column; 
-  align-items: center;
+  display: grid;
   gap: 2rem;
-  max-width: 1600px;
-  width: 90%;
-  margin: 0 auto;
-  padding: clamp(1rem, 3vw, 3rem);
-  border-radius: 12px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.currentWorkContainer {
+  grid-column: 1 / -1; /* Make this container span all columns */
+  padding: 2rem;
+  text-align: center;
+}
+
+.currentWorkContainer p {
+  margin: 0;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+  color: #c8efff;
 }
 
 .projectDarkWrapper {
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
+  background-color: rgba(10, 25, 47, 0.8);
+  border-radius: 10px;
   padding: 2rem;
   width: 100%;
   display: flex;
@@ -406,6 +415,25 @@
   text-align: left;
   margin-top: 0;
   line-height: 1.5;
+}
+
+.projectTechnologies {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.projectTechnologies li {
+  color: #c8efff;
+  font-size: 0.9rem;
+  background: rgba(200, 239, 255, 0.1);
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  border: 1px solid rgba(200, 239, 255, 0.2);
+  white-space: nowrap;
 }
 
 .endingFooter {
@@ -683,7 +711,7 @@
 }
 
 .clickable:after {
-  content: "Klik for mere";
+  content: attr(data-read-more);
   position: absolute;
   bottom: 1rem;
   right: 1rem;

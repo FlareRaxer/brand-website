@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 import styles from './styles/page.module.css';
@@ -17,6 +17,7 @@ interface Project {
   description: string; // Short description for the card
   image: string; // Main preview image
   altText: string;
+  technologies: string[];
   content: ContentSection[]; // Array of content sections for the modal
 }
 
@@ -61,36 +62,20 @@ export default function Home() {
     return () => clearInterval(interval);
   }, [fullText, typingSpeed]);
 
-  const projectsData: Project[] = [
+  const projectsData: Project[] = useMemo(() => [
     {
       id: 1,
       title: t('projects.internship.title'),
       description: t('projects.internship.description'),
       image: "/images/efterskoleLogin.png",
       altText: t('projects.internship.title'),
+      technologies: ["Flutter", "Dart", "Firebase", "Firestore", "Cloud Storage"],
       content: [
-        {
-          type: "text" as const,
-          content: "Under min praktik hos Ligthouse Digital udviklede jeg en omfattende webapplikation ved hjælp af Flutter og Firebase. Projektet omfattede udvikling af en brugervenlig grænseflade, implementering af autentifikation med Firebase Auth, realtidsdatabase integration og cloud storage funktionalitet."
-        },
-        {
-          type: "image" as const,
-          content: "/images/efterskole.jpg",
-          altText: "Firebase authentication implementation"
-        },
-        {
-          type: "text" as const,
-          content: "Projektet gik ud på at lave en Admin side baseret på en allerede eksisterende app. Hver skole skulle kunne administrere mest muligt selv, og se relevant data i et enkelt og simpelt format, der læner sig op af den eksisterende app.<br/><br/> Da den eksisterende app var skrevet i Flutter 2.X var det nødvendigt at skrive den nye app fra bunden i Flutter 3.26+. Da al data og backend lå på en eksisterende Firbase/Firestore, så kunne meget nemt importeres og implementeres. <br/><br/>Den største udfordring var at implementere og lave graferne som ses på billedet ovenover. Databasen hvor brugerne ligger skulle opdateres for at graferne ville virke efter hensigten. Herunder udvide brugardatabasen med flere kategorier.<br/><br/> Herefter blev Mentor siden lavet. På denne side kan den enkelte skole nemt acceptere nye mentoranmodninger, se eksisterende godkendte mentorer og fjerne dem igen. Endvidere kan man se hvornår hver mentor sidst har været logget på."
-        },
-        {
-          type: "image" as const,
-          content: "/images/efmentor.png",
-          altText: "Mentor admin side"
-        },
-        {
-          type: "text" as const,
-          content: "Denne praktikopgave har været enorm spændende og udfordrende. Først og fremmest har det givet mig en god forståelse og en solid base omkring Flutter/Dart. Det har opgså givet mig en god forståelse for, hvordan Flutter bruger dependencies. Ydermere har jeg lært meget om, hvad og hvordan Firebase og dets muligheder kan bruges i samspil mellem apps og web. <br/><br/> Da tiden var knap var der flere ting jeg ikke nåede at kaste mig ud i, blandt andet CORE i Firebase. <br/><br/> Baseret på en 3 måneders praktik, hvor den første måned gik med at lære Flutter. 1 måned på selvvalgt projekt og 1 måned på praktikopgaven, så er jeg ganske tilfreds med resultatet. Og dette projekt har givet mig en solid forståelse og et godt fundamnet til at arbejde mere i Flutter/Dart"
-        }
+        { type: "text", content: t('projects.internship.content1') },
+        { type: "image", content: "/images/efterskole.jpg", altText: "Firebase authentication implementation" },
+        { type: "text", content: t('projects.internship.content2') },
+        { type: "image", content: "/images/efmentor.png", altText: "Mentor admin side" },
+        { type: "text", content: t('projects.internship.content3') }
       ]
     },
     {
@@ -99,29 +84,13 @@ export default function Home() {
       description: t('projects.exam.description'),
       image: "/images/metteMunk.png",
       altText: t('projects.exam.title'),
+      technologies: ["Vue.js", "Nuxt.js", "JavaScript", "HTML", "CSS"],
       content: [
-        {
-          type: "text" as const,
-          content: "Min eksamensopgave på multimediedesigneruddannelsen fokuserede på at opdatere fra Nuxt 2 til Nuxt 3 på en allerede eksisterende hjemmeside. Et redesign af den eksisterende hjemmeside blev også udført. <br/><br/> Det var sjovt og udfordrende at tage en side som er live,og opdatere frameworken. Særdeles udfordrende, men utrolig lærerigt"
-        },
-        {
-          type: "image" as const,
-          content: "/images/data.png",
-          altText: "Eksamensopgave wireframes"
-        },
-        {
-          type: "text" as const,
-          content: "Projektet krævede research, wireframing, prototyping og testing for at sikre en optimal brugeroplevelse. Det var også udfordrende at der på den eksisterende side ikke eksisterede noget data omkring brugerne. Derfor skulle vi starte fra bunden, selvom hjemmesiden var live. Dette var en sjov og anderledes udfordring.<br/><br/> "
-        },
-        {
-          type: "image" as const,
-          content: "/images/redesign.png",
-          altText: "Eksamensopgave redesign"
-        },
-        {
-          type: "text" as const,
-          content: "Projektet fik stor ros for brugervenlighed og teknisk implementering. Derudover gav projektet mig en god forståelse for hvad Vue er og hvilke muligheder Vue & Nuxt giver. Ligeledes gav det en bred forståelse for, hvrodan komplekse sider er sat sammen"
-        }
+        { type: "text", content: t('projects.exam.content1') },
+        { type: "image", content: "/images/data.png", altText: "Eksamensopgave wireframes" },
+        { type: "text", content: t('projects.exam.content2') },
+        { type: "image", content: "/images/redesign.png", altText: "Eksamensopgave redesign" },
+        { type: "text", content: t('projects.exam.content3') }
       ]
     },
     {
@@ -130,32 +99,16 @@ export default function Home() {
       description: t('projects.portfolio.description'),
       image: "/images/scharling.png",
       altText: t('projects.portfolio.title'),
+      technologies: ["Next.js", "React", "TypeScript", "CSS Modules", "JavaScript"],
       content: [
-        {
-          type: "text" as const,
-          content: "Dette portfolio website er inspireret af havet. Fra du rammer vandet, til du dykker længere ned, hvor lyset langsomt forsvinder og en ny verden åbner sig. Bygget med Next.js og React for at skabe en hurtig, responsiv og moderne præsentation af mine projekter og kompetencer."
-        },
-        {
-          type: "image" as const,
-          content: "/images/portscroll.png",
-          altText: "Portfolio design process"
-        },
-        {
-          type: "text" as const,
-          content: "Siden anvender CSS Modules for styling, custom animations for interaktivitet, og er fuldt responsive på tværs af alle enheder. Som en særlig udfordring implementerede jeg en custom scroll progress bar og en dynamisk navigation der fremhæver den aktuelle sektion."
-        },
-        {
-          type: "image" as const,
-          content: "/images/mobile.png",
-          altText: "Portfolio responsive design"
-        },
-        {
-          type: "text" as const,
-          content: "Siden er min første hjemmeside i React, og har derfor også lagt grundlaget for min forståelse af React og Next.js."
-        }
+        { type: "text", content: t('projects.portfolio.content1') },
+        { type: "image", content: "/images/portscroll.png", altText: "Portfolio design process" },
+        { type: "text", content: t('projects.portfolio.content2') },
+        { type: "image", content: "/images/mobile.png", altText: "Portfolio responsive design" },
+        { type: "text", content: t('projects.portfolio.content3') }
       ]
     },
-  ];
+  ], [t]);
 
   const openProjectModal = (project: Project) => {
     setSelectedProject(project);
@@ -208,6 +161,7 @@ export default function Home() {
               key={project.id} 
               className={`${styles.projectDarkWrapper} ${styles.clickable}`}
               onClick={() => openProjectModal(project)}
+              data-read-more={t('projects.readMore')}
             >
               <div className={styles.projectPic}>
                 <Image 
@@ -220,9 +174,17 @@ export default function Home() {
               <div className={styles.projectText}>
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
+                <ul className={styles.projectTechnologies}>
+                  {project.technologies.map((tech, index) => (
+                    <li key={index}>{tech}</li>
+                  ))}
+                </ul>
               </div>
             </div>
           ))}
+          <div className={`${styles.projectDarkWrapper} ${styles.currentWorkContainer}`}>
+            <p dangerouslySetInnerHTML={{ __html: t('projects.currentWork') }}></p>
+          </div>
         </div>
       </section>
 
@@ -269,7 +231,7 @@ export default function Home() {
               <div className={styles.progressContainer}>
                 <div className={styles.progressLabel}>{t('certificates.google.progress')}</div>
                 <div className={styles.progressBar}>
-                  <div className={styles.progressFill} style={{width: '25%'}}></div>
+                  <div className={styles.progressFill} style={{width: '50%'}}></div>
                 </div>
               </div>
             </div>

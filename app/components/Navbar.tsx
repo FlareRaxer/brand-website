@@ -12,6 +12,7 @@ const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(true);
   const lastScrollY = useRef(0);
   const { t, i18n } = useTranslation();
+  const [isMounted, setIsMounted] = useState(false);
 
   // Section highlight logic
   useEffect(() => {
@@ -61,6 +62,11 @@ const Navbar = () => {
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Client-side mount check
+  useEffect(() => {
+    setIsMounted(true);
   }, []);
 
   const scrollToSection = (id: string) => {
@@ -142,23 +148,25 @@ const Navbar = () => {
           </li>
 
           {/* Language Switcher */}
-          <li className="navbar-language">
-            <button
-              className={`language-btn ${i18n.language === 'da' ? 'active' : ''}`}
-              onClick={() => changeLanguage('da')}
-              aria-label="Switch to Danish"
-            >
-              DA
-            </button>
-            <span className="language-separator">|</span>
-            <button
-              className={`language-btn ${i18n.language === 'en' ? 'active' : ''}`}
-              onClick={() => changeLanguage('en')}
-              aria-label="Switch to English"
-            >
-              EN
-            </button>
-          </li>
+          {isMounted && (
+            <li className="navbar-language">
+              <button
+                className={`language-btn ${i18n.language === 'da' ? 'active' : ''}`}
+                onClick={() => changeLanguage('da')}
+                aria-label="Switch to Danish"
+              >
+                DA
+              </button>
+              <span className="language-separator">|</span>
+              <button
+                className={`language-btn ${i18n.language === 'en' ? 'active' : ''}`}
+                onClick={() => changeLanguage('en')}
+                aria-label="Switch to English"
+              >
+                EN
+              </button>
+            </li>
+          )}
         </ul>
         <button
           className={`navbar-hamburger${menuOpen ? ' open' : ''}`}
