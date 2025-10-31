@@ -19,6 +19,21 @@
   "projects": {
     "title": "Selected Projects",
     "readMore": "Click for more",
+    "portfolio": {
+      "title": "Portfolio Website",
+      "description": "My personal portfolio, built with Next.js, React, and TypeScript. The site is designed with inspiration from the ocean and includes custom animations and a dynamic scroll-progress bar for a unique and interactive user experience.",
+      "content1": "This portfolio is intended to be more than just a gallery; it is a demonstration of my technical and creative abilities. It is built with Next.js, React, and TypeScript to achieve optimal performance, type safety, and a modern development experience. The entire design concept is inspired by a dive into the ocean, where the user moves deeper through the content.",
+      "content2": "To realize the unique user experience, I have implemented several custom features. A dynamic scroll-progress bar shows how far the 'dive' has progressed, and the navigation updates automatically to highlight the current section. I used CSS Modules for scoped styling and created subtle animations to make the interaction lively and engaging.",
+      "content3": "As my first major project in React, this site has been a fantastic learning journey. It has solidified my understanding of React Hooks, component-based architecture, and the benefits of Next.js's server-side rendering. The project demonstrates my ability to combine technical implementation with a creative design concept."
+    },
+    "hairplant": {
+      "title": "Hairplant App",
+      "status": "Beta",
+      "description": "A cross-platform Flutter application revolutionizing hair transplant journeys. The app enables users to track their progress, upload mandatory status photos, receive expert feedback, and communicate directly with the support team.",
+      "content1": "Hairplant began as a vision to digitalize and enhance the customer experience throughout their hair transplant journey. The idea was to create an all-in-one platform where users could track their progress, upload documentation, and have direct contact with their clinic – all in their pocket.<br/><br/>The project started with extensive research and user interviews to understand the real needs. Wireframes and prototypes were then developed in close collaboration with the clinic and potential users to ensure the solution addressed the right challenges.",
+      "content2": "Development was built on Flutter to ensure a consistent experience across Android, iOS, and web. Firebase was chosen as the backend solution due to its scalability, real-time database, and built-in authentication.<br/><br/>One of the most challenging aspects was designing an intuitive upload system for status photos, where users needed to take pictures at specific points in their journey. The system had to be both user-friendly and ensure the clinic received the necessary high-quality documentation.",
+      "content3": "The app also includes an intelligent notification system that reminds users to upload photos on the correct days of their journey. An integrated chat function gives users direct access to support, which has significantly improved customer satisfaction.<br/><br/>The project is now in beta phase with real users, and the feedback has been overwhelmingly positive. The Hairplant app demonstrates my ability to take a project from idea to deployment, handle complex user interaction, and create value through technology."
+    },
     "currentWork": "Currently, I'm putting the final touches on a cross-platform Flutter app (Android, iOS, web) that is about to enter beta. Simultaneously, I'm developing a dynamic website for a fitness coach, built with React and a Strapi headless CMS. My passion for development means I always have new projects in the pipeline. Feel free to explore my public repositories on GitHub, or contact me directly to learn more about my private projects and current work.",
     "internship": {
       "title": "Internship Project",
@@ -33,13 +48,6 @@
       "content1": "My final exam project was a technically challenging migration of a live commercial website from Nuxt 2 to Nuxt 3. The task involved not only upgrading the framework but also a complete UI/UX redesign to modernize the user experience.",
       "content2": "The biggest challenge was the lack of user data or analytics for the existing site. The redesign, therefore, had to be based on UX heuristics, competitor analysis, and web design best practices. The process involved wireframing, prototyping, and user testing to validate design choices before implementation began.<br/><br/>The migration itself from Nuxt 2 to 3 was a complex task that required an in-depth understanding of breaking changes and the new Composition API. It was an educational process in planning and executing a technical migration with minimal downtime.",
       "content3": "The project was a success and received high praise for both its technical implementation and improved design. It gave me valuable experience working on complex Vue.js projects and strengthened my skills in frontend architecture, UI/UX, and project management."
-    },
-    "portfolio": {
-      "title": "Portfolio Website",
-      "description": "My personal portfolio, built with Next.js, React, and TypeScript. The site is designed with inspiration from the ocean and includes custom animations and a dynamic scroll-progress bar for a unique and interactive user experience.",
-      "content1": "This portfolio is intended to be more than just a gallery; it is a demonstration of my technical and creative abilities. It is built with Next.js, React, and TypeScript to achieve optimal performance, type safety, and a modern development experience. The entire design concept is inspired by a dive into the ocean, where the user moves deeper through the content.",
-      "content2": "To realize the unique user experience, I have implemented several custom features. A dynamic scroll-progress bar shows how far the 'dive' has progressed, and the navigation updates automatically to highlight the current section. I used CSS Modules for scoped styling and created subtle animations to make the interaction lively and engaging.",
-      "content3": "As my first major project in React, this site has been a fantastic learning journey. It has solidified my understanding of React Hooks, component-based architecture, and the benefits of Next.js's server-side rendering. The project demonstrates my ability to combine technical implementation with a creative design concept."
     }
   },
   "certificates": {

@@ -64,6 +64,14 @@
   object-fit: cover;
 }
 
+.modalImage {
+  width: 100%;
+  max-height: 500px; /* Limit the maximum height */
+  object-fit: contain; /* Maintain aspect ratio without cropping */
+  border-radius: 8px;
+  margin: 1.5rem 0;
+}
+
 .modalTextContent {
   padding: 2rem;
   background: rgba(0, 0, 0, 0.2);
@@ -83,6 +91,12 @@
   font-size: 1.1rem;
 }
 
+.modalText {
+  line-height: 1.8;
+  color: #c8efff;
+  margin: 1.5rem 0;
+}
+
 .contentText {
   color: white;
   line-height: 1.6;
@@ -96,11 +110,16 @@
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
 }
 
 .contentImage {
-  width: 100%;
+  width: auto;
+  max-width: 50%;
+  max-height: 70vh;
   display: block;
+  border-radius: 8px;
 }
 
 @keyframes fadeIn {
@@ -114,6 +133,10 @@
 }
 
 @media (max-width: 768px) {
+  .contentImage {
+    max-width: 100%;
+  }
+
   .modalContent {
     width: 95%;
   }

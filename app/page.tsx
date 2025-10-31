@@ -18,6 +18,7 @@ interface Project {
   image: string; // Main preview image
   altText: string;
   technologies: string[];
+  status?: string; // Optional status badge
   content: ContentSection[]; // Array of content sections for the modal
 }
 
@@ -108,6 +109,23 @@ export default function Home() {
         { type: "text", content: t('projects.portfolio.content3') }
       ]
     },
+    {
+      id: 4,
+      title: t('projects.hairplant.title'),
+      description: t('projects.hairplant.description'),
+      image: "/images/hairplant-logo.jpg",
+      altText: t('projects.hairplant.title'),
+      technologies: ["Flutter", "Android", "iOS", "Web", "Firebase"],
+      status: t('projects.hairplant.status'),
+      content: [
+        { type: "text", content: t('projects.hairplant.content1') },
+        { type: "image", content: "/images/hairplant-forside.jpg", altText: "Hairplant user journey" },
+        { type: "text", content: t('projects.hairplant.content2') },
+        { type: "image", content: "/images/hairplant-chat.jpg", altText: "Hairplant chat feature" },
+        { type: "text", content: t('projects.hairplant.content3') },
+        { type: "image", content: "/images/hairplant-faq.jpg", altText: "Hairplant FAQ videos" }
+      ]
+    },
   ], [t]);
 
   const openProjectModal = (project: Project) => {
@@ -178,6 +196,9 @@ export default function Home() {
                   {project.technologies.map((tech, index) => (
                     <li key={index}>{tech}</li>
                   ))}
+                  {project.status && (
+                    <li className={styles.projectStatus}>{project.status}</li>
+                  )}
                 </ul>
               </div>
             </div>

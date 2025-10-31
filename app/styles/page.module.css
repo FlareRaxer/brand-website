@@ -363,7 +363,7 @@
   width: 100%;
   display: flex;
   flex-direction: row; 
-  align-items: flex-start; 
+  align-items: stretch; 
   gap: 2rem;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   margin: 0;
@@ -378,27 +378,24 @@
   border-radius: 12px;
   overflow: hidden;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  min-height: 300px; /* Set a minimum height */
 }
 
 .projectPic img {
+  position: absolute;
   width: 100%;
-  height: auto; /* Let height adjust automatically to maintain aspect ratio */
+  height: 100%;
   object-fit: cover;
-  border-radius: 8px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  filter: brightness(1.1) contrast(1.1);
+  border-radius: 10px;
 }
 
 .projectText {
-  flex: 1; /* Fill available space */
-  width: auto; /* Remove fixed width */
-  max-width: none; /* Remove max-width */
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  margin: 0;
-  padding: 0;
+  flex-grow: 1;
+  position: relative; /* Add relative positioning */
 }
 
 .projectText h3 {
@@ -427,13 +424,24 @@
 }
 
 .projectTechnologies li {
-  color: #c8efff;
-  font-size: 0.9rem;
-  background: rgba(200, 239, 255, 0.1);
-  padding: 0.3rem 0.6rem;
-  border-radius: 4px;
-  border: 1px solid rgba(200, 239, 255, 0.2);
-  white-space: nowrap;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.projectStatus {
+  background: linear-gradient(135deg, rgba(76, 175, 80, 0.3), rgba(76, 175, 80, 0.1)) !important;
+  border: 1px solid rgba(76, 175, 80, 0.5) !important;
+  color: #4caf50 !important;
+  font-weight: 700;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
 }
 
 .endingFooter {
@@ -444,7 +452,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 3rem 0;
+  padding: 50px 20px;
 }
 
 /* Footer styles - update these properties */

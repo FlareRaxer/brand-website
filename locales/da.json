@@ -19,6 +19,21 @@
   "projects": {
     "title": "Udvalgte Projekter",
     "readMore": "Klik for mere",
+    "portfolio": {
+      "title": "Portfolio Hjemmeside",
+      "description": "Mit personlige portfolio, bygget med Next.js, React og TypeScript. Siden er designet med inspiration fra havet og indeholder custom-animationer samt en dynamisk scroll-progress bar for en unik og interaktiv brugeroplevelse.",
+      "content1": "Dette portfolio er tænkt som mere end blot et galleri; det er en demonstration af mine tekniske og kreative evner. Det er bygget med Next.js, React og TypeScript for at opnå optimal ydeevne, typesikkerhed og en moderne udviklingsoplevelse. Hele designkonceptet er inspireret af et dyk i havet, hvor brugeren bevæger sig dybere ned gennem indholdet.",
+      "content2": "For at realisere den unikke brugeroplevelse har jeg implementeret flere custom-funktioner. En dynamisk scroll-progress bar viser, hvor langt 'dykket' er, og navigationen opdateres automatisk for at fremhæve den aktuelle sektion. Jeg har brugt CSS Modules til scopet styling og skabt subtile animationer for at gøre interaktionen levende og engagerende.",
+      "content3": "Som mit første større projekt i React har denne side været en fantastisk læringsrejse. Den har solidificeret min forståelse for React Hooks, komponentbaseret arkitektur og fordelene ved Next.js' server-side rendering. Projektet viser min evne til at kombinere teknisk implementering med et kreativt designkoncept."
+    },
+    "hairplant": {
+      "title": "Hairplant App",
+      "status": "Beta",
+      "description": "En cross-platform Flutter-applikation der revolutionerer hårtransplantationsforløb. Appen giver brugerne mulighed for at følge deres rejse, uploade obligatoriske statusbilleder, få feedback fra eksperter og kommunikere direkte med support-teamet.",
+      "content1": "Hairplant begyndte som en vision om at digitalisere og forbedre oplevelsen for kunder gennem deres hårtransplantationsforløb. Idéen var at skabe en alt-i-én platform, hvor brugere kunne følge deres fremskridt, uploade dokumentation og have direkte kontakt med deres klinik – alt sammen i lommen.<br/><br/>Projektet startede med omfattende research og brugerinterviews for at forstå de reelle behov. Herefter blev wireframes og prototyper udviklet i tæt samarbejde med klinikken og potentielle brugere for at sikre, at løsningen adresserede de rigtige udfordringer.",
+      "content2": "Udviklingen blev bygget på Flutter for at sikre en ensartet oplevelse på tværs af Android, iOS og web. Firebase blev valgt som backend-løsning på grund af dens skalerbarhed, realtids-database og indbyggede autentifikation.<br/><br/>En af de mest udfordrende aspekter var at designe et intuitivt upload-system for statusbilleder, hvor brugerne skulle kunne tage billeder på specifikke tidspunkter i deres forløb. Systemet skulle både være brugervenligt og sikre, at klinikken modtog den nødvendige dokumentation i høj kvalitet.",
+      "content3": "Appen inkluderer også et intelligent notifikationssystem, der minder brugerne om at uploade billeder på de rigtige dage i deres forløb. En integreret chat-funktion giver brugerne direkte adgang til support, hvilket har forbedret kundetilfredsheden markant.<br/><br/>Projektet er nu i beta-fase med rigtige brugere, og feedbacken har været overvældende positiv. Hairplant-appen demonstrerer min evne til at tage et projekt fra idé til deployment, håndtere kompleks brugerinteraktion og skabe værdi gennem teknologi."
+    },
     "currentWork": "Lige nu lægger jeg sidste hånd på en cross-platform Flutter-app (Android, iOS, web), som snart går i beta. Samtidig udvikler jeg en dynamisk hjemmeside for en fitness-træner, bygget med React og et Strapi headless CMS. Min passion for udvikling betyder, at jeg altid har nye projekter i gang. Udforsk mine offentlige repositorier på GitHub, eller kontakt mig direkte for at høre mere om mine private projekter og nuværende arbejde.",
     "internship": {
       "title": "Praktikprojekt",
@@ -33,13 +48,6 @@
       "content1": "Min afsluttende eksamensopgave var en teknisk udfordrende migrering af en live kommerciel hjemmeside fra Nuxt 2 til Nuxt 3. Opgaven indebar ikke kun en opgradering af frameworket, men også et komplet UI/UX-redesign for at modernisere brugeroplevelsen.",
       "content2": "Den største udfordring var, at der ikke eksisterede brugerdata eller analyser for den eksisterende side. Redesignet måtte derfor baseres på UX-heuristikker, konkurrentanalyser og best practices inden for webdesign. Processen involverede wireframing, prototyping og brugertests for at validere designvalg, før implementeringen begyndte.<br/><br/>Selve migreringen fra Nuxt 2 til 3 var en kompleks opgave, der krævede en dybdegående forståelse af breaking changes og det nye Composition API. Det var en lærerig proces i at planlægge og eksekvere en teknisk migrering med minimal nedetid.",
       "content3": "Projektet blev en succes og fik stor ros for både den tekniske implementering og det forbedrede design. Det gav mig værdifuld erfaring med at arbejde på komplekse Vue.js-projekter og styrkede mine kompetencer inden for frontend-arkitektur, UI/UX og projektledelse."
-    },
-    "portfolio": {
-      "title": "Portfolio Hjemmeside",
-      "description": "Mit personlige portfolio, bygget med Next.js, React og TypeScript. Siden er designet med inspiration fra havet og indeholder custom-animationer samt en dynamisk scroll-progress bar for en unik og interaktiv brugeroplevelse.",
-      "content1": "Dette portfolio er tænkt som mere end blot et galleri; det er en demonstration af mine tekniske og kreative evner. Det er bygget med Next.js, React og TypeScript for at opnå optimal ydeevne, typesikkerhed og en moderne udviklingsoplevelse. Hele designkonceptet er inspireret af et dyk i havet, hvor brugeren bevæger sig dybere ned gennem indholdet.",
-      "content2": "For at realisere den unikke brugeroplevelse har jeg implementeret flere custom-funktioner. En dynamisk scroll-progress bar viser, hvor langt 'dykket' er, og navigationen opdateres automatisk for at fremhæve den aktuelle sektion. Jeg har brugt CSS Modules til scopet styling og skabt subtile animationer for at gøre interaktionen levende og engagerende.",
-      "content3": "Som mit første større projekt i React har denne side været en fantastisk læringsrejse. Den har solidificeret min forståelse for React Hooks, komponentbaseret arkitektur og fordelene ved Next.js' server-side rendering. Projektet viser min evne til at kombinere teknisk implementering med et kreativt designkoncept."
     }
   },
   "certificates": {
