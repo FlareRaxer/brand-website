@@ -85,6 +85,10 @@
   font-weight: 500;
 }
 
+.modalStoreLinks {
+  margin: 0 0 1.75rem 0;
+}
+
 .modalTextContent p {
   color: white;
   line-height: 1.6;
@@ -102,6 +106,17 @@
   line-height: 1.6;
   font-size: 1.1rem;
   margin-bottom: 2rem;
+}
+
+.contentText a {
+  color: #c8efff;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.contentText a:hover {
+  color: #f534f5;
 }
 
 .contentImageContainer {

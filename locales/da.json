@@ -7,34 +7,79 @@
     "about": "Hvem er jeg?",
     "projects": "Projekter",
     "certificates": "Certifikater",
-    "technologies": "Teknologier",
     "contact": "Kontakt",
     "language": "Sprog"
   },
   "about": {
     "title": "Hvem er jeg?",
-    "name": "Jeg er Jonas Jensen",
-    "description": "Som uddannet multimededesigner fra UCL Odense kombinerer jeg kreativ tænkning med teknisk præcision i alt mit arbejde. Min passion ligger i at udvikle intuitive brugergrænseflader og skabe digitale oplevelser, der både imponerer visuelt og fungerer optimalt.\n\nJeg har specialiseret mig i frontend-udvikling med React og Vue.js samt cross-platform app-udvikling med Flutter. Min erfaring spænder fra design i Figma til implementering af Firebase-løsninger og komplekse API-integrationer. Jeg trives i krydsfeltet mellem design og kode, hvor jeg kan kombinere det æstetiske med det funktionelle.\n\nFor at udvide min tekniske værktøjskasse er jeg i gang med IBM Backend Professional Certificate og Google Cybersecurity Professional Certificate, hvilket giver mig en omfattende forståelse for hele den digitale værdikæde – fra brugerens første interaktion til databasens sikre forvaltning af data."
+    "eyebrow": "Profil",
+    "kicker": "Multimediedesigner",
+    "name": "Jonas Jensen",
+    "lead": "Jeg bygger apps og websites, som folk faktisk bruger. Fra design, frontend og backend og sikkerhed, så jeg har hele kæden med— fra skærmen til serveren og sikkerheden omkring den. Jeg stopper ikke ved det, jeg allerede can. Jeg lærer hele tiden nyt.",
+    "seeWork": "Se projekterne",
+    "seeWorkEyebrow": "Arbejde",
+    "focusTitle": "Det jeg bygger",
+    "stackLabel": "Værktøjer jeg bruger",
+    "focus": {
+      "apps": {
+        "title": "Apps",
+        "text": "Cross-platform Flutter til iOS, Android og web — fra første skærm til publicering i butikkerne.",
+        "proof": "Hairplant · Efterskole Mentor"
+      },
+      "web": {
+        "title": "Web",
+        "text": "Frontend i React, Next.js, Vue og Nuxt. Redesign, framework-migrering og CMS.",
+        "proof": "Hairplant Web · denne side"
+      },
+      "design": {
+        "title": "Design til kode",
+        "text": "Jeg designer i Figma og bygger det selv. Krydsfeltet mellem UI og implementering er der, jeg arbejder bedst.",
+        "proof": "Figma · UI/UX"
+      }
+    }
   },
   "projects": {
     "title": "Udvalgte Projekter",
     "readMore": "Klik for mere",
+    "featuredLabel": "Udvalgt projekt",
+    "availableOnStores": "Nu på iOS & Android",
+    "downloadOn": "Hent i",
+    "getItOn": "Hent den på",
+    "appStore": "App Store",
+    "playStore": "Google Play",
+    "appStoreAria": "Hent Hairplant i App Store",
+    "playStoreAria": "Hent Hairplant på Google Play",
+    "visitSite": "hairplant.dk",
+    "visitSiteEyebrow": "Besøg",
+    "visitSiteAria": "Åbn Hairplants hjemmeside",
+    "readStory": "Læs historien",
+    "now": {
+      "eyebrow": "I gang",
+      "kicker": "Hairplant",
+      "title": "Næste skridt",
+      "description": "Hairplant er live i App Store og på Google Play. Jeg splitter funktionalitet ud og fortsætter udviklingen. Der er altid nye projekter i pipelinen — kig på GitHub, eller skriv hvis du vil høre om det, der ikke ligger offentligt.",
+      "status": "Live",
+      "readHairplant": "Læs historien",
+      "readHairplantEyebrow": "Hairplant",
+      "contactCta": "Kontakt",
+      "contactCtaEyebrow": "Skriv"
+    },
     "portfolio": {
       "title": "Portfolio Hjemmeside",
-      "description": "Mit personlige portfolio, bygget med Next.js, React og TypeScript. Siden er designet med inspiration fra havet og indeholder custom-animationer samt en dynamisk scroll-progress bar for en unik og interaktiv brugeroplevelse.",
+      "description": "Min personlige portfolio, bygget med Next.js, React og TypeScript. Siden er designet med inspiration fra havet. Portfolioen er desuden en demonstration af forskellige AI modeller og deres formåen. Siden er overordnet genereret af AI",
       "content1": "Dette portfolio er tænkt som mere end blot et galleri; det er en demonstration af mine tekniske og kreative evner. Det er bygget med Next.js, React og TypeScript for at opnå optimal ydeevne, typesikkerhed og en moderne udviklingsoplevelse. Hele designkonceptet er inspireret af et dyk i havet, hvor brugeren bevæger sig dybere ned gennem indholdet.",
       "content2": "For at realisere den unikke brugeroplevelse har jeg implementeret flere custom-funktioner. En dynamisk scroll-progress bar viser, hvor langt 'dykket' er, og navigationen opdateres automatisk for at fremhæve den aktuelle sektion. Jeg har brugt CSS Modules til scopet styling og skabt subtile animationer for at gøre interaktionen levende og engagerende.",
       "content3": "Som mit første større projekt i React har denne side været en fantastisk læringsrejse. Den har solidificeret min forståelse for React Hooks, komponentbaseret arkitektur og fordelene ved Next.js' server-side rendering. Projektet viser min evne til at kombinere teknisk implementering med et kreativt designkoncept."
     },
     "hairplant": {
       "title": "Hairplant App",
-      "status": "Beta",
-      "description": "En cross-platform Flutter-applikation der revolutionerer hårtransplantationsforløb. Appen giver brugerne mulighed for at følge deres rejse, uploade obligatoriske statusbilleder, få feedback fra eksperter og kommunikere direkte med support-teamet.",
+      "status": "Live",
+      "description": "En cross-platform Flutter-app til hårtransplantationsforløb — nu live i App Store og på Google Play. Patienter følger deres fremskridt, uploader statusbilleder, får feedback fra eksperter og chatter direkte med klinikken.",
       "content1": "Hairplant begyndte som en vision om at digitalisere og forbedre oplevelsen for kunder gennem deres hårtransplantationsforløb. Idéen var at skabe en alt-i-én platform, hvor brugere kunne følge deres fremskridt, uploade dokumentation og have direkte kontakt med deres klinik – alt sammen i lommen.<br/><br/>Projektet startede med omfattende research og brugerinterviews for at forstå de reelle behov. Herefter blev wireframes og prototyper udviklet i tæt samarbejde med klinikken og potentielle brugere for at sikre, at løsningen adresserede de rigtige udfordringer.",
       "content2": "Udviklingen blev bygget på Flutter for at sikre en ensartet oplevelse på tværs af Android, iOS og web. Firebase blev valgt som backend-løsning på grund af dens skalerbarhed, realtids-database og indbyggede autentifikation.<br/><br/>En af de mest udfordrende aspekter var at designe et intuitivt upload-system for statusbilleder, hvor brugerne skulle kunne tage billeder på specifikke tidspunkter i deres forløb. Systemet skulle både være brugervenligt og sikre, at klinikken modtog den nødvendige dokumentation i høj kvalitet.",
-      "content3": "Appen inkluderer også et intelligent notifikationssystem, der minder brugerne om at uploade billeder på de rigtige dage i deres forløb. En integreret chat-funktion giver brugerne direkte adgang til support, hvilket har forbedret kundetilfredsheden markant.<br/><br/>Projektet er nu i beta-fase med rigtige brugere, og feedbacken har været overvældende positiv. Hairplant-appen demonstrerer min evne til at tage et projekt fra idé til deployment, håndtere kompleks brugerinteraktion og skabe værdi gennem teknologi."
+      "content3": "Appen inkluderer også et intelligent notifikationssystem, der minder brugerne om at uploade billeder på de rigtige dage i deres forløb. En integreret chat-funktion giver brugerne direkte adgang til support, hvilket har forbedret kundetilfredsheden markant.<br/><br/>Hairplant er nu live i App Store og på Google Play, med rigtige brugere på både iOS og Android. Projektet viser, at jeg kan tage et produkt fra idé til store-release — inklusive komplekse brugerflows, notifikationer og klinikkommunikation."
     },
-    "currentWork": "Lige nu lægger jeg sidste hånd på en cross-platform Flutter-app (Android, iOS, web), som snart går i beta. Samtidig udvikler jeg en dynamisk hjemmeside for en fitness-træner, bygget med React og et Strapi headless CMS. Min passion for udvikling betyder, at jeg altid har nye projekter i gang. Udforsk mine offentlige repositorier på GitHub, eller kontakt mig direkte for at høre mere om mine private projekter og nuværende arbejde.",
+    "currentWork": "Hairplant er nu live i App Store og på Google Play. Udviklingen fortsætter og en opdeling af funktionaliteterne er igang. Min passion for udvikling betyder, at jeg altid har nye projekter i gang. Udforsk mine offentlige repositorier på GitHub, eller kontakt mig direkte for at høre mere om mine private projekter og nuværende arbejde.",
     "internship": {
       "title": "Praktikprojekt",
       "description": "Udvikling af en komplet Flutter-administrationsapp med Firebase-backend til en skole-app. Projektet inkluderede et live-data dashboard, mentor-system og brugeradministration for at automatisere administrative processer.",
@@ -52,68 +97,42 @@
   },
   "certificates": {
     "title": "Certifikater",
+    "featuredLabel": "Certifikat",
+    "completedBadge": "Gennemført",
+    "inProgressLabel": "I gang",
+    "viewCertificate": "Se certifikat",
+    "viewCertificateEyebrow": "Coursera",
+    "viewCertificateAria": "Åbn IBM-certifikatet på Coursera",
+    "aboutCourse": "Om kurset",
+    "aboutCourseEyebrow": "Læs mere",
     "ibm": {
       "title": "IBM Backend Professional Certificate",
-      "description": "Dette professionelle certificeringsprogram har givet mig de nødvendige færdigheder og viden til backend-udvikling gennem praktisk erfaring med branchens mest anvendte teknologier.",
-      "skills": "De vigtigste kompetencer jeg har opbygget inkluderer:",
-      "skill1": "Praktisk erfaring med <strong>Python og Django</strong> til backend-udvikling og API-design",
-      "skill2": "Containerisering og orkestrering med <strong>Docker, Kubernetes og OpenShift</strong>",
-      "skill3": "Database-administration og optimering med <strong>SQL og NoSQL</strong> systemer",
-      "skill4": "Implementation af <strong>mikroservices arkitektur</strong> og serverless computing",
-      "skill5": "Applikationssikkerhed, monitorering og <strong>DevOps best practices</strong>",
-      "skill6": "Versionsstyring og samarbejde gennem <strong>Git, GitHub og Linux scripting</strong>",
-      "details": "Certificeringen dækker også mikroservices, serverless arkitektur, applikationssikkerhed og monitorering - alt sammen essentielle komponenter i moderne backend-systemer. Gennem omfattende hands-on labs og projekter har jeg opbygget praktisk erfaring med at udvikle server-side systemer og services, der driver nutidens web- og mobilapplikationer.",
-      "links": "Se mit officielle certifikat <a href=\"https://www.coursera.org/account/accomplishments/specialization/certificate/EFQMK8QG37XP\" target=\"_blank\" rel=\"noopener noreferrer\">her</a> eller læs mere om kurset <a href=\"https://www.coursera.org/professional-certificates/ibm-backend-development\" target=\"_blank\" rel=\"noopener noreferrer\">her</a>.",
-      "progress": "100% Gennemført"
+      "description": "Professionel backend-certificering med praktisk arbejde i Python, Django, containere, databaser og DevOps — fra API-design til deployment.",
+      "progress": "100%"
     },
     "google": {
       "title": "Google Cybersecurity Professional Certificate",
-      "description": "Dette certificeringsprogram fra Google giver mig et godt overblik og en fundamental forståelse for cybersikkerhed gennem 8 specialiserede kurser. Jeg lærer essentielle færdigheder inden for netværkssikkerhed, kryptering, trusselsdetektion og sikkerhedsprotokoller.",
-      "details": "Kurset dækker praktiske værktøjer som Python, Linux, SQL og SIEM-systemer, der er afgørende i moderne sikkerhedsanalyse. Gennem praktiske øvelser arbejder jeg med virkelighedsnære scenarier, hvor jeg implementerer sikkerhedsforanstaltninger mod trusler som phishing, malware og uautoriseret adgang.",
-      "link": "Hvis du ønsker at se mere omkring kurset kan du se det <a href=\"https://www.coursera.org/professional-certificates/google-cybersecurity\" target=\"_blank\" rel=\"noopener noreferrer\">her</a>.",
-      "progress": "4 ud af 8 moduler"
-    }
-  },
-  "technologies": {
-    "title": "Teknologier & Værktøjer",
-    "vueReact": {
-      "title": "Vue & React",
-      "description": "JavaScript-frameworks med komponent-baseret arkitektur og effektiv state management. Min eksamensopgave er lavet i Vue. Min portfolio er lavet i React"
-    },
-    "flutter": {
-      "title": "Flutter",
-      "description": "Google's UI-toolkit til at udvikle native apps til Android, iOS, web og desktop fra én fælles kodebase med Dart. Blandt andet min praktikopgave er lavet i Flutter."
-    },
-    "firebase": {
-      "title": "Firebase",
-      "description": "En komplet backend-as-a-service platform fra Google med realtidsdatabase, authentication, hosting og cloud functions til hurtig app-udvikling."
-    },
-    "cms": {
-      "title": "CMS",
-      "description": "Erfaring med både Wordpress med Breakdance builder og headless CMS som DatoCMS til fleksibel og effektiv content management."
-    },
-    "restApi": {
-      "title": "Rest API",
-      "description": "Design og implementering af RESTful API'er med ressourcebaserede endpoints, der muliggør sikker dataudveksling mellem frontend og backend."
-    },
-    "python": {
-      "title": "Python",
-      "description": "Alsidig programmeringssprog til dataanalyse, automation, backend-udvikling og machine learning med et enormt økosystem af biblioteker."
-    },
-    "kubernetes": {
-      "title": "Kubernetes",
-      "description": "Container-orkestreringsplatform til automatiseret deployment, skalering og administration af containeriserede applikationer i cloud miljøer."
-    },
-    "ai": {
-      "title": "AI",
-      "description": "Jeg har et bredt kendskab til forskellige AI modeller, både i forhold til kodning, UI/UX design og grafisk design. OpenAI, Google Gemini, Github CoPilot & Anthropic Claude er dem jeg oftest bruger."
+      "description": "Grundlæggende cybersikkerhed: netværk, kryptering, trusselsdetektion og praktiske værktøjer som Python, Linux, SQL og SIEM.",
+      "aboutCourseAria": "Læs mere om Google Cybersecurity-kurset",
+      "progress": "90%"
     }
   },
   "contact": {
     "title": "Kontakt mig",
-    "description": "Leder du efter en dedikeret udvikler, der kan skabe brugervenlige digitale løsninger fra ide til implementering? Med min baggrund som multimediedesigner og specialisering inden for React, Vue, Flutter og backend-teknologier leverer jeg moderne, skalerbare applikationer der skaber værdi for både brugere og forretning.\n\nJeg behersker hele udviklingscyklen – fra design og prototyping til deployment og vedligeholdelse. Mine projekter viser, hvordan jeg kombinerer æstetik med funktionalitet for at løse konkrete forretningsudfordringer. Lad os tale om, hvordan jeg kan hjælpe dit team med at realisere jeres næste digitale vision.",
+    "eyebrow": "Kontakt",
+    "kicker": "Åben",
+    "headline": "Lad os tale om næste projekt",
+    "description": "Jeg bygger apps og web fra Figma til release. Skriv hvis du søger en frontend- og Flutter-udvikler til et team eller et produkt.",
+    "plaqueName": "JJ",
+    "plaqueRole": "Frontend & Flutter",
+    "plaquePlace": "Danmark",
+    "email": "Email",
+    "emailEyebrow": "Skriv til",
     "github": "GitHub",
+    "githubEyebrow": "Kode",
     "linkedin": "LinkedIn",
-    "downloadCv": "Download CV"
+    "linkedinEyebrow": "Netværk",
+    "downloadCv": "Download CV",
+    "cvEyebrow": "PDF"
   }
 }

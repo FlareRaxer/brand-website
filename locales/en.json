@@ -1,119 +1,138 @@
 {
   "hero": {
     "title": "Sccharling",
-    "subtitle": "Welcome to my Portfolio"
+    "subtitle": "Welcome to my portfolio"
   },
   "nav": {
     "about": "Who am I?",
     "projects": "Projects",
     "certificates": "Certificates",
-    "technologies": "Technologies",
     "contact": "Contact",
     "language": "Language"
   },
   "about": {
     "title": "Who am I?",
-    "name": "I am Jonas Jensen",
-    "description": "As a graduate multimedia designer from UCL Odense, I combine creative thinking with technical precision in all my work. My passion lies in developing intuitive user interfaces and creating digital experiences that both impress visually and function optimally.\n\nI have specialized in frontend development with React and Vue.js as well as cross-platform app development with Flutter. My experience ranges from design in Figma to implementing Firebase solutions and complex API integrations. I thrive in the intersection between design and code, where I can combine the aesthetic with the functional.\n\nTo expand my technical toolkit, I am currently pursuing IBM Backend Professional Certificate and Google Cybersecurity Professional Certificate, which gives me a comprehensive understanding of the entire digital value chain – from the user's first interaction to the database's secure management of data."
+    "eyebrow": "Profile",
+    "kicker": "Multimedia designer",
+    "name": "Jonas Jensen",
+    "lead": "I build apps and websites that people actually use. From design, frontend and backend to security, so I cover the full chain — from the screen to the server and the security around it. I don't stop at what I already know. I'm always learning something new.",
+    "seeWork": "See the projects",
+    "seeWorkEyebrow": "Work",
+    "focusTitle": "What I build",
+    "stackLabel": "Tools I use",
+    "focus": {
+      "apps": {
+        "title": "Apps",
+        "text": "Cross-platform Flutter for iOS, Android and web — from the first screen to a store release.",
+        "proof": "Hairplant · Efterskole Mentor"
+      },
+      "web": {
+        "title": "Web",
+        "text": "Frontend in React, Next.js, Vue and Nuxt. Redesign, framework migration and CMS.",
+        "proof": "Hairplant Web · this site"
+      },
+      "design": {
+        "title": "Design to code",
+        "text": "I design in Figma and build it myself. The overlap between UI and implementation is where I work best.",
+        "proof": "Figma · UI/UX"
+      }
+    }
   },
   "projects": {
-    "title": "Selected Projects",
+    "title": "Selected projects",
     "readMore": "Click for more",
+    "featuredLabel": "Featured project",
+    "availableOnStores": "Now on iOS & Android",
+    "downloadOn": "Download on the",
+    "getItOn": "Get it on",
+    "appStore": "App Store",
+    "playStore": "Google Play",
+    "appStoreAria": "Download Hairplant on the App Store",
+    "playStoreAria": "Download Hairplant on Google Play",
+    "visitSite": "hairplant.dk",
+    "visitSiteEyebrow": "Visit",
+    "visitSiteAria": "Open the Hairplant website",
+    "readStory": "Read the story",
+    "now": {
+      "eyebrow": "In progress",
+      "kicker": "Hairplant",
+      "title": "Next steps",
+      "description": "Hairplant is live on the App Store and Google Play. I'm splitting features out and continuing development. There are always new projects in the pipeline — browse GitHub, or get in touch if you want to hear about the work that isn't public.",
+      "status": "Live",
+      "readHairplant": "Read the story",
+      "readHairplantEyebrow": "Hairplant",
+      "contactCta": "Contact",
+      "contactCtaEyebrow": "Write"
+    },
     "portfolio": {
-      "title": "Portfolio Website",
-      "description": "My personal portfolio, built with Next.js, React, and TypeScript. The site is designed with inspiration from the ocean and includes custom animations and a dynamic scroll-progress bar for a unique and interactive user experience.",
-      "content1": "This portfolio is intended to be more than just a gallery; it is a demonstration of my technical and creative abilities. It is built with Next.js, React, and TypeScript to achieve optimal performance, type safety, and a modern development experience. The entire design concept is inspired by a dive into the ocean, where the user moves deeper through the content.",
-      "content2": "To realize the unique user experience, I have implemented several custom features. A dynamic scroll-progress bar shows how far the 'dive' has progressed, and the navigation updates automatically to highlight the current section. I used CSS Modules for scoped styling and created subtle animations to make the interaction lively and engaging.",
-      "content3": "As my first major project in React, this site has been a fantastic learning journey. It has solidified my understanding of React Hooks, component-based architecture, and the benefits of Next.js's server-side rendering. The project demonstrates my ability to combine technical implementation with a creative design concept."
+      "title": "Portfolio website",
+      "description": "My personal portfolio, built with Next.js, React and TypeScript. The site is designed with inspiration from the ocean. The portfolio is also a demonstration of different AI models and what they can do. The site is largely generated by AI.",
+      "content1": "This portfolio is meant to be more than a gallery; it is a demonstration of my technical and creative abilities. It is built with Next.js, React and TypeScript for performance, type safety and a modern development experience. The whole design concept is inspired by a dive into the ocean, where the user moves deeper through the content.",
+      "content2": "To deliver that experience I implemented several custom features. A dynamic scroll-progress bar shows how far the 'dive' has gone, and the navigation updates automatically to highlight the current section. I used CSS Modules for scoped styling and created subtle animations to keep the interaction lively.",
+      "content3": "As my first major project in React, this site has been a strong learning journey. It has solidified my understanding of React Hooks, component-based architecture and the benefits of Next.js server-side rendering. The project shows I can combine technical implementation with a creative design concept."
     },
     "hairplant": {
       "title": "Hairplant App",
-      "status": "Beta",
-      "description": "A cross-platform Flutter application revolutionizing hair transplant journeys. The app enables users to track their progress, upload mandatory status photos, receive expert feedback, and communicate directly with the support team.",
-      "content1": "Hairplant began as a vision to digitalize and enhance the customer experience throughout their hair transplant journey. The idea was to create an all-in-one platform where users could track their progress, upload documentation, and have direct contact with their clinic – all in their pocket.<br/><br/>The project started with extensive research and user interviews to understand the real needs. Wireframes and prototypes were then developed in close collaboration with the clinic and potential users to ensure the solution addressed the right challenges.",
-      "content2": "Development was built on Flutter to ensure a consistent experience across Android, iOS, and web. Firebase was chosen as the backend solution due to its scalability, real-time database, and built-in authentication.<br/><br/>One of the most challenging aspects was designing an intuitive upload system for status photos, where users needed to take pictures at specific points in their journey. The system had to be both user-friendly and ensure the clinic received the necessary high-quality documentation.",
-      "content3": "The app also includes an intelligent notification system that reminds users to upload photos on the correct days of their journey. An integrated chat function gives users direct access to support, which has significantly improved customer satisfaction.<br/><br/>The project is now in beta phase with real users, and the feedback has been overwhelmingly positive. The Hairplant app demonstrates my ability to take a project from idea to deployment, handle complex user interaction, and create value through technology."
+      "status": "Live",
+      "description": "A cross-platform Flutter app for hair transplant journeys — now live on the App Store and Google Play. Patients track their progress, upload status photos, get expert feedback and chat directly with the clinic.",
+      "content1": "Hairplant started as a vision to digitise and improve the customer experience throughout a hair transplant journey. The idea was an all-in-one platform where users could follow their progress, upload documentation and stay in direct contact with their clinic — all in their pocket.<br/><br/>The project began with extensive research and user interviews to understand the real needs. Wireframes and prototypes were then developed in close collaboration with the clinic and potential users, so the solution addressed the right problems.",
+      "content2": "Development was built on Flutter to keep the experience consistent across Android, iOS and web. Firebase was chosen as the backend for its scalability, real-time database and built-in authentication.<br/><br/>One of the hardest parts was designing an intuitive upload flow for status photos, where users had to take pictures at specific points in their journey. The system had to be easy to use and still give the clinic documentation in high enough quality.",
+      "content3": "The app also includes a notification system that reminds users to upload photos on the right days. An integrated chat gives them direct access to support, which has clearly improved customer satisfaction.<br/><br/>Hairplant is now live on the App Store and Google Play, with real users on both iOS and Android. The project shows I can take a product from idea to a store release — including complex user flows, notifications and clinic communication."
     },
-    "currentWork": "Currently, I'm putting the final touches on a cross-platform Flutter app (Android, iOS, web) that is about to enter beta. Simultaneously, I'm developing a dynamic website for a fitness coach, built with React and a Strapi headless CMS. My passion for development means I always have new projects in the pipeline. Feel free to explore my public repositories on GitHub, or contact me directly to learn more about my private projects and current work.",
+    "currentWork": "Hairplant is now live on the App Store and Google Play. Development continues, and a split of the features is underway. My passion for building means I always have new projects going. Explore my public repositories on GitHub, or contact me directly to hear more about private projects and current work.",
     "internship": {
-      "title": "Internship Project",
-      "description": "Developed a complete Flutter administration app with a Firebase backend for a school application. The project included a live-data dashboard, mentor system, and user management to automate administrative processes.",
-      "content1": "During my internship at Lighthouse Digital, I was tasked with building a modern admin panel for an existing school app. The core of the project was to provide schools with tools to manage their own data and gain insights through an intuitive dashboard.",
-      "content2": "The existing mobile app was built on an older version of Flutter (2.x), making a direct extension impractical. I therefore made the technical decision to rebuild the admin panel from scratch in Flutter 3.26+. This ensured a future-proof and maintainable solution. By reusing the existing Firebase/Firestore backend, I could focus on frontend development and new features.<br/><br/>A key challenge was the implementation of data visualizations. To get the graphs to work correctly, it was necessary to restructure parts of the Firestore database and extend the user data model. This was an educational process in data modeling and problem-solving in a live environment.<br/><br/>Additionally, I developed a complete mentor administration system, where schools can easily approve new mentors, view their status, and manage access.",
-      "content3": "This project was a fantastic opportunity to dive deep into Flutter/Dart and build an application from the ground up. It gave me a solid, practical understanding of state management, dependency handling, and the interaction between a frontend app and a BaaS platform like Firebase. Within a 3-month internship, where the first month was dedicated to learning Flutter, I am proud to have delivered a functional and value-adding solution."
+      "title": "Internship project",
+      "description": "Development of a complete Flutter admin app with a Firebase backend for a school application. The project included a live-data dashboard, a mentor system and user management to automate administrative processes.",
+      "content1": "During my internship at Lighthouse Digital I was asked to build a modern admin panel for an existing school app. The core of the project was to give schools tools to manage their own data and get insight through an intuitive dashboard.",
+      "content2": "The existing mobile app was built on an older version of Flutter (2.x), which made a direct extension impractical. I therefore chose to rebuild the admin panel from scratch in Flutter 3.26+. That made the solution future-proof and easier to maintain. By reusing the existing Firebase/Firestore backend I could focus on frontend development and new features.<br/><br/>A key challenge was implementing the data visualisations. To get the charts working correctly I had to restructure parts of the Firestore database and extend the user data model. That was a useful process in data modelling and problem-solving in a live environment.<br/><br/>I also built a full mentor administration system, where schools can easily approve new mentors, see their status and manage access.",
+      "content3": "This project was a great chance to go deep into Flutter/Dart and build an application from the ground up. It gave me a solid, practical understanding of state management, dependency handling and how a frontend app talks to a BaaS platform like Firebase. Within a 3-month internship, where the first month was spent learning Flutter, I am proud to have delivered a working solution that added real value."
     },
     "exam": {
-      "title": "Exam Project",
-      "description": "As my final exam project, I upgraded a live website from Nuxt 2 to Nuxt 3, including a complete redesign. The project demonstrated technical depth in Vue.js and a strong understanding of UI/UX principles.",
-      "content1": "My final exam project was a technically challenging migration of a live commercial website from Nuxt 2 to Nuxt 3. The task involved not only upgrading the framework but also a complete UI/UX redesign to modernize the user experience.",
-      "content2": "The biggest challenge was the lack of user data or analytics for the existing site. The redesign, therefore, had to be based on UX heuristics, competitor analysis, and web design best practices. The process involved wireframing, prototyping, and user testing to validate design choices before implementation began.<br/><br/>The migration itself from Nuxt 2 to 3 was a complex task that required an in-depth understanding of breaking changes and the new Composition API. It was an educational process in planning and executing a technical migration with minimal downtime.",
-      "content3": "The project was a success and received high praise for both its technical implementation and improved design. It gave me valuable experience working on complex Vue.js projects and strengthened my skills in frontend architecture, UI/UX, and project management."
+      "title": "Exam project",
+      "description": "As my final exam project I upgraded a live website from Nuxt 2 to Nuxt 3, including a full redesign. The project showed technical depth in Vue.js and a strong understanding of UI/UX principles.",
+      "content1": "My final exam assignment was a technically demanding migration of a live commercial website from Nuxt 2 to Nuxt 3. The task was not only a framework upgrade, but also a complete UI/UX redesign to modernise the experience.",
+      "content2": "The biggest challenge was that there was no user data or analytics for the existing site. The redesign therefore had to be based on UX heuristics, competitor analysis and web design best practices. The process involved wireframing, prototyping and user testing to validate design choices before implementation started.<br/><br/>The migration from Nuxt 2 to 3 was a complex job that required a deep understanding of breaking changes and the new Composition API. It was a useful process in planning and running a technical migration with minimal downtime.",
+      "content3": "The project was a success and was praised for both the technical implementation and the improved design. It gave me valuable experience on complex Vue.js projects and strengthened my skills in frontend architecture, UI/UX and project management."
     }
   },
   "certificates": {
     "title": "Certificates",
+    "featuredLabel": "Certificate",
+    "completedBadge": "Completed",
+    "inProgressLabel": "In progress",
+    "viewCertificate": "View certificate",
+    "viewCertificateEyebrow": "Coursera",
+    "viewCertificateAria": "Open the IBM certificate on Coursera",
+    "aboutCourse": "About the course",
+    "aboutCourseEyebrow": "Read more",
     "ibm": {
       "title": "IBM Backend Professional Certificate",
-      "description": "This professional certification program has given me the necessary skills and knowledge for backend development through practical experience with the industry's most used technologies.",
-      "skills": "The most important skills I have built include:",
-      "skill1": "Practical experience with <strong>Python and Django</strong> for backend development and API design",
-      "skill2": "Containerization and orchestration with <strong>Docker, Kubernetes and OpenShift</strong>",
-      "skill3": "Database administration and optimization with <strong>SQL and NoSQL</strong> systems",
-      "skill4": "Implementation of <strong>microservices architecture</strong> and serverless computing",
-      "skill5": "Application security, monitoring and <strong>DevOps best practices</strong>",
-      "skill6": "Version control and collaboration through <strong>Git, GitHub and Linux scripting</strong>",
-      "details": "The certification also covers microservices, serverless architecture, application security and monitoring - all essential components of modern backend systems. Through extensive hands-on labs and projects, I have built practical experience in developing server-side systems and services that drive today's web and mobile applications.",
-      "links": "See my official certificate <a href=\"https://www.coursera.org/account/accomplishments/specialization/certificate/EFQMK8QG37XP\" target=\"_blank\" rel=\"noopener noreferrer\">here</a> or read more about the course <a href=\"https://www.coursera.org/professional-certificates/ibm-backend-development\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>.",
-      "progress": "100% Completed"
+      "description": "A professional backend certification with hands-on work in Python, Django, containers, databases and DevOps — from API design to deployment.",
+      "progress": "100%"
     },
     "google": {
       "title": "Google Cybersecurity Professional Certificate",
-      "description": "This certification program from Google gives me a good overview and a fundamental understanding of cybersecurity through 8 specialized courses. I learn essential skills in network security, encryption, threat detection and security protocols.",
-      "details": "The course covers practical tools such as Python, Linux, SQL and SIEM systems, which are crucial in modern security analysis. Through practical exercises, I work with real-world scenarios where I implement security measures against threats such as phishing, malware and unauthorized access.",
-      "link": "If you want to see more about the course, you can see it <a href=\"https://www.coursera.org/professional-certificates/google-cybersecurity\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>.",
-      "progress": "4 out of 8 modules"
-    }
-  },
-  "technologies": {
-    "title": "Technologies & Tools",
-    "vueReact": {
-      "title": "Vue & React",
-      "description": "JavaScript frameworks with component-based architecture and efficient state management. My exam project is made in Vue. My portfolio is made in React"
-    },
-    "flutter": {
-      "title": "Flutter",
-      "description": "Google's UI toolkit for developing native apps for Android, iOS, web and desktop from a single codebase with Dart. Among other things, my internship project is made in Flutter."
-    },
-    "firebase": {
-      "title": "Firebase",
-      "description": "A complete backend-as-a-service platform from Google with real-time database, authentication, hosting and cloud functions for rapid app development."
-    },
-    "cms": {
-      "title": "CMS",
-      "description": "Experience with both WordPress with Breakdance builder and headless CMS like DatoCMS for flexible and efficient content management."
-    },
-    "restApi": {
-      "title": "REST API",
-      "description": "Design and implementation of RESTful APIs with resource-based endpoints that enable secure data exchange between frontend and backend."
-    },
-    "python": {
-      "title": "Python",
-      "description": "Versatile programming language for data analysis, automation, backend development and machine learning with an enormous ecosystem of libraries."
-    },
-    "kubernetes": {
-      "title": "Kubernetes",
-      "description": "Container orchestration platform for automated deployment, scaling and management of containerized applications in cloud environments."
-    },
-    "ai": {
-      "title": "AI",
-      "description": "I have a broad knowledge of different AI models, both in terms of coding, UI/UX design and graphic design. OpenAI, Google Gemini, GitHub CoPilot & Anthropic Claude are the ones I use most often."
+      "description": "Foundational cybersecurity: networks, encryption, threat detection and practical tools such as Python, Linux, SQL and SIEM.",
+      "aboutCourseAria": "Read more about the Google Cybersecurity course",
+      "progress": "90%"
     }
   },
   "contact": {
     "title": "Contact me",
-    "description": "Are you looking for a dedicated developer who can create user-friendly digital solutions from idea to implementation? With my background as a multimedia designer and specialization in React, Vue, Flutter and backend technologies, I deliver modern, scalable applications that create value for both users and business.\n\nI master the entire development cycle – from design and prototyping to deployment and maintenance. My projects show how I combine aesthetics with functionality to solve concrete business challenges. Let's talk about how I can help your team realize your next digital vision.",
+    "eyebrow": "Contact",
+    "kicker": "Open",
+    "headline": "Let's talk about the next project",
+    "description": "I build apps and web from Figma to release. Write if you are looking for a frontend and Flutter developer for a team or a product.",
+    "plaqueName": "JJ",
+    "plaqueRole": "Frontend & Flutter",
+    "plaquePlace": "Denmark",
+    "email": "Email",
+    "emailEyebrow": "Write to",
     "github": "GitHub",
+    "githubEyebrow": "Code",
     "linkedin": "LinkedIn",
-    "downloadCv": "Download CV"
+    "linkedinEyebrow": "Network",
+    "downloadCv": "Download CV",
+    "cvEyebrow": "PDF"
   }
 }

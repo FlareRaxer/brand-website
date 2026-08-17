@@ -101,37 +101,12 @@
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
 
-.proLang {
-  position: relative;
-  width: 100%;
-  background: linear-gradient(#000f23, #000f23);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 3rem 0;
-}
-
 .sectionTitle {
   font-size: 4rem;
   color: #c8efff;
   text-align: center;
   margin-bottom: 1rem; /* Reduced from 3rem to create better spacing */
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.proLangWrapper {
-  background-color: rgba(0, 40, 80, 0.7);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  max-width: 1600px;
-  width: 90%;
-  margin: 0 auto;
-  padding: clamp(1rem, 3vw, 3rem);
-  border-radius: 12px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 .aboutDarkWrapper {
@@ -146,52 +121,87 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-.techBox {
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  padding: 1rem 1.5rem 1.5rem 1.5rem;
-  width: calc(33.333% - 2rem); /* 3 boxes per row on desktop */
-  max-width: 350px;
-  min-height: 280px; /* Add minimum height */
+.focusBlock {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  justify-content: space-between; /* Distribute content evenly */
+  gap: 1rem;
 }
 
-.techBox img {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-  margin-bottom: 1rem;
-}
-
-.techBox h3 {
+.focusEyebrow {
+  margin: 0;
   color: #c8efff;
-  font-size: 2rem;
-  margin: 0.5rem 0;
-  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
-.techBox p {
+.focusGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.focusCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  font-family: inherit;
+  width: 100%;
+  padding: 1.25rem 1.35rem 1.2rem;
+  border: 1px solid rgba(200, 239, 255, 0.14);
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.22);
+  color: inherit;
+}
+
+.focusCard h3 {
+  margin: 0 0 0.45rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.focusCard p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
   color: #f5f5f5;
-  font-size: 1rem;
-  line-height: 1.4;
 }
 
-/* Responsive adjustments */
-@media (max-width: 1200px) {
-  .techBox {
-    width: calc(50% - 2rem); /* 2 boxes per row on tablet */
-  }
+.focusProof {
+  margin-top: 0.9rem;
+  color: #f534f5;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
-@media (max-width: 768px) {
-  .techBox {
-    width: 100%; /* 1 box per row on mobile */
-    max-width: 400px;
+.stackChips {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.15rem 0 0;
+  margin: 0;
+}
+
+.stackChips li {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #c8efff;
+}
+
+@media (max-width: 1100px) {
+  .focusGrid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -767,56 +777,6 @@
   transform-origin: bottom left;
 }
 
-/* Improved Skill level indicators */
-.skillLevelContainer {
-  display: flex;
-  gap: 8px; /* Slightly larger gap for better visual separation */
-  margin-top: 15px;
-  width: 100%;
-  padding: 0 4px;
-  margin-bottom: 12px;
-}
-
-.skillLevel {
-  height: 10px; /* Taller for better visibility */
-  border-radius: 4px;
-  flex: 1;
-  min-width: 30px; /* Wider minimum width */
-  position: relative; /* For potential label positioning */
-}
-
-.skillBeginner {
-  background-color: rgba(200, 239, 255, 0.9); /* Light blue - more visible */
-  border: 1px solid rgba(200, 239, 255, 0.3);
-}
-
-.skillIntermediate {
-  background-color: rgba(48, 127, 181, 1); /* Medium blue - fully opaque */
-  border: 1px solid rgba(48, 127, 181, 0.3);
-}
-
-.skillAdvanced {
-  background-color: #f534f5; /* Pink */
-  border: 1px solid rgba(245, 52, 245, 0.3);
-}
-
-.skillActive {
-  opacity: 1;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Add shadow to active indicators */
-
-}
-
-.skillInactive {
-  opacity: 0.15; /* Much lower opacity for inactive indicators */
-  filter: grayscale(70%); /* Apply grayscale filter to inactive indicators */
-  height: 8px; /* Make inactive indicators smaller */
-  margin-top: 1px; /* Center align with the active indicators */
-}
-
-.skillActive {
-  animation: pulseActive 2s infinite ease-in-out;
-}
-
 .certificateList {
   list-style: none;
   padding: 0;
@@ -843,4 +803,479 @@
 .certificateList li strong {
   color: #ffffff;
   font-weight: 600;
+}
+
+/* Featured Hairplant story */
+.featuredProject {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  align-items: stretch;
+  border: 1px solid rgba(200, 239, 255, 0.22);
+  background:
+    radial-gradient(ellipse at 12% 18%, rgba(80, 200, 190, 0.16), transparent 46%),
+    radial-gradient(ellipse at 92% 88%, rgba(245, 52, 245, 0.1), transparent 48%),
+    rgba(10, 25, 47, 0.92);
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(200, 239, 255, 0.06),
+    0 0 32px rgba(200, 239, 255, 0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.featuredProject::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(200, 239, 255, 0.06) 0%,
+    transparent 28%,
+    transparent 72%,
+    rgba(245, 52, 245, 0.05) 100%
+  );
+}
+
+.featuredProject:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 16px 44px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(200, 239, 255, 0.16),
+    0 0 40px rgba(200, 239, 255, 0.12);
+}
+
+.phoneStage {
+  position: relative;
+  flex: 1 1 46%;
+  min-height: 440px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phoneStage::before {
+  content: '';
+  position: absolute;
+  width: 68%;
+  height: 72%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(80, 200, 190, 0.28), transparent 70%);
+  filter: blur(10px);
+}
+
+.phone {
+  position: absolute;
+  width: 168px;
+  aspect-ratio: 9 / 19.4;
+  padding: 7px;
+  border-radius: 28px;
+  background: linear-gradient(180deg, #16324a 0%, #061018 100%);
+  box-shadow:
+    0 22px 40px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(200, 239, 255, 0.22),
+    0 0 24px rgba(200, 239, 255, 0.08);
+  overflow: hidden;
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+
+.phone img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 22px;
+}
+
+.phoneCenter {
+  width: 198px;
+  z-index: 3;
+}
+
+.phoneLeft {
+  transform: translateX(-92px) translateY(24px) rotate(-9deg);
+  z-index: 2;
+  opacity: 0.88;
+}
+
+.phoneRight {
+  transform: translateX(92px) translateY(24px) rotate(9deg);
+  z-index: 2;
+  opacity: 0.88;
+}
+
+.featuredProject:hover .phoneCenter {
+  transform: translateY(-8px);
+  box-shadow:
+    0 28px 48px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(200, 239, 255, 0.35),
+    0 0 28px rgba(200, 239, 255, 0.16);
+}
+
+.featuredProject:hover .phoneLeft {
+  transform: translateX(-108px) translateY(14px) rotate(-11deg);
+}
+
+.featuredProject:hover .phoneRight {
+  transform: translateX(108px) translateY(14px) rotate(11deg);
+}
+
+.featuredText {
+  justify-content: center;
+  z-index: 1;
+}
+
+.featuredText p,
+.featuredText h3 {
+  order: initial;
+}
+
+.featuredEyebrow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0 0 0.85rem 0 !important;
+  color: #c8efff !important;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.78rem !important;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.featuredDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #f534f5;
+  box-shadow: 0 0 10px rgba(245, 52, 245, 0.8);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.featuredTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.featuredTitleRow h3 {
+  margin: 0 !important;
+}
+
+.featuredLogo {
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+
+.readStory {
+  align-self: flex-start;
+  margin-top: 1.35rem;
+  padding: 0.65rem 1.15rem;
+  border: 1px solid rgba(200, 239, 255, 0.35);
+  border-radius: 10px;
+  background: transparent;
+  color: #c8efff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.readStory:hover,
+.readStory:focus-visible {
+  background: #c8efff;
+  color: #001f3f;
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.featuredCertificate,
+.featuredNow,
+.featuredContact,
+.featuredAbout {
+  cursor: default;
+}
+
+.portraitStage {
+  position: relative;
+  flex: 1 1 38%;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portraitStage::before {
+  content: '';
+  position: absolute;
+  width: 70%;
+  height: 74%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(80, 200, 190, 0.26), transparent 70%);
+  filter: blur(10px);
+}
+
+.portraitFrame {
+  position: relative;
+  z-index: 1;
+  width: min(260px, 78%);
+  aspect-ratio: 4 / 5;
+  padding: 7px;
+  border-radius: 22px;
+  overflow: hidden;
+  background: linear-gradient(180deg, #16324a 0%, #061018 100%);
+  border: 1px solid rgba(200, 239, 255, 0.22);
+  box-shadow:
+    0 22px 40px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(200, 239, 255, 0.08),
+    0 0 24px rgba(200, 239, 255, 0.1);
+  transform: rotate(-3deg);
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+
+.portraitFrame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
+  border-radius: 16px;
+}
+
+.featuredAbout:hover .portraitFrame {
+  transform: rotate(-1deg) translateY(-8px);
+  box-shadow:
+    0 28px 48px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(200, 239, 255, 0.28),
+    0 0 28px rgba(200, 239, 255, 0.16);
+}
+
+.nowPlaque {
+  transform: rotate(3deg);
+}
+
+.featuredNow:hover .nowPlaque {
+  transform: rotate(1deg) translateY(-8px);
+  box-shadow:
+    0 28px 48px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(200, 239, 255, 0.28),
+    0 0 28px rgba(200, 239, 255, 0.16);
+}
+
+.contactPlaque {
+  transform: rotate(-3deg);
+}
+
+.featuredContact:hover .contactPlaque {
+  transform: rotate(-1deg) translateY(-8px);
+  box-shadow:
+    0 28px 48px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(200, 239, 255, 0.28),
+    0 0 28px rgba(200, 239, 255, 0.16);
+}
+
+.certStage {
+  position: relative;
+  flex: 1 1 40%;
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.certStage::before {
+  content: '';
+  position: absolute;
+  width: 68%;
+  height: 72%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(80, 200, 190, 0.26), transparent 70%);
+  filter: blur(10px);
+}
+
+.certPlaque {
+  position: relative;
+  z-index: 1;
+  width: min(250px, 78%);
+  aspect-ratio: 3 / 4;
+  padding: 1.8rem 1.3rem;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background:
+    linear-gradient(180deg, rgba(200, 239, 255, 0.1), rgba(7, 21, 37, 0.94)),
+    #071525;
+  border: 1px solid rgba(200, 239, 255, 0.28);
+  box-shadow:
+    0 22px 40px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(200, 239, 255, 0.08),
+    0 0 24px rgba(200, 239, 255, 0.1);
+  transform: rotate(-4deg);
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+
+.featuredCertificate:hover .certPlaque {
+  transform: rotate(-2deg) translateY(-8px);
+  box-shadow:
+    0 28px 48px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(200, 239, 255, 0.28),
+    0 0 28px rgba(200, 239, 255, 0.16);
+}
+
+.certIssuer {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.7rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  color: #c8efff;
+}
+
+.certPlaque strong {
+  margin-top: 0.7rem;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.certKind {
+  margin-top: 0.2rem;
+  color: rgba(200, 239, 255, 0.75);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.certComplete {
+  margin-top: 1.4rem;
+  color: #4caf50;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.1rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.certMeta {
+  margin-top: 0.45rem;
+  color: rgba(200, 239, 255, 0.65);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.certificateSupport {
+  flex-direction: column;
+  cursor: default;
+}
+
+.certificateSupport .featuredText {
+  width: 100%;
+}
+
+.certificateSupport .progressContainer {
+  margin: 1rem 0 0;
+}
+
+@media (max-width: 1300px) {
+  .featuredProject {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .phoneStage,
+  .certStage,
+  .portraitStage {
+    width: 100%;
+    min-height: 400px;
+  }
+
+  .featuredText {
+    text-align: center;
+    align-items: center;
+  }
+
+  .featuredEyebrow,
+  .featuredTitleRow {
+    justify-content: center;
+  }
+
+  .readStory {
+    align-self: center;
+  }
+}
+
+@media (max-width: 800px) {
+  .phoneStage,
+  .certStage,
+  .portraitStage {
+    min-height: 320px;
+  }
+
+  .portraitFrame {
+    transform: none;
+  }
+
+  .featuredAbout:hover .portraitFrame {
+    transform: translateY(-4px);
+  }
+
+  .certPlaque {
+    transform: none;
+  }
+
+  .featuredCertificate:hover .certPlaque,
+  .featuredNow:hover .nowPlaque,
+  .featuredContact:hover .contactPlaque {
+    transform: translateY(-4px);
+  }
+
+  .nowPlaque,
+  .contactPlaque {
+    transform: none;
+  }
+
+  .phoneLeft,
+  .phoneRight {
+    display: none;
+  }
+
+  .phoneCenter {
+    position: relative;
+    width: 180px;
+  }
+
+  .featuredProject:hover .phoneCenter {
+    transform: none;
+  }
+
+  .featuredEyebrow {
+    justify-content: center;
+    letter-spacing: 0.08em;
+  }
+
+  .featuredTitleRow {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .featuredTitleRow h3 {
+    white-space: nowrap;
+    font-size: 1.7rem;
+  }
+
+  .featuredText p,
+  .featuredText h3 {
+    order: initial;
+    text-align: center;
+  }
 }

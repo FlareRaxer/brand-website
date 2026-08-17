@@ -131,13 +131,6 @@ const Navbar = () => {
           >
             {t('nav.certificates')}
           </li>
-          <li
-            className={activeSection === 'proLang' ? 'active' : ''}
-            onClick={() => scrollToSection('proLang')}
-            data-text={t('nav.technologies')}
-          >
-            {t('nav.technologies')}
-          </li>
 
           <li
             className={activeSection === 'endingFooter' ? 'active' : ''}
